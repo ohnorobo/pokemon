@@ -12,40 +12,60 @@
 import os
 from PIL import Image
 import glob
+from collections import Counter
+from pprint import pprint
+import json
 
-start_dir = "images/full_sprites/opaque/kanto/"
-end_dir = "images/full_sprites/transparent/kanto/"
+start_dir = "images/pokemonParts/body/"
 
-#get your images using glob
 iconmap = os.listdir(start_dir)
-#iconMap = sorted(iconMap)
 
-print(len(iconmap))
+#print(len(iconmap))
+master = Image.new(
+    mode='RGBA',
+    size=(50, 151), #50 px for color rows, 151 pokemon
+    color=(0,0,0,0))  # fully transparent
 
+newdata = []
+
+listdata = []
+
+pokenumber = 0
 for filename in iconmap:
+  pokenumber += 1
+  listdata.append((pokenumber, [])) # add (2, []) to the list
   image = Image.open(start_dir+filename) 
-  image_width, image_height = image.size
 
-  print( "the image will by %d by %d" % (image_width, image_height))
-  print( "creating image...")
-  master = Image.new(
-      mode='RGBA',
-      size=(image_width, image_height),
-      color=(0,0,0,0))  # fully transparent
-  master.paste(image,(0,0))
+  data = image.getdata()
+  colors = Counter()
 
-  data = master.getdata()
-
-  newdata = []
   for item in data:
-    if item[0] == 255 and item[1] == 255 and item[2] == 255:
-      newdata.append((255,255,255,0))
-    else:
-      newdata.append(item)
+    colors[item] += 1
 
-  master.putdata(newdata)
+  total=0
 
-  print( "saving master.jpg...")
-  master.save(end_dir+filename)
-  print( "saved!")
+  for color, num in sorted(colors.items(), key=lambda x: x[1], reverse=True):
+    newdata.append(color)
+
+    if color[3] != 0:
+      listdata[pokenumber-1][1].append(color)
+    #pprint(color)
+    total += 1
+
+  #print(total)
+
+  for i in range(50-total): #transparent pixels
+    newdata.append((255,255,255,0))
+    total += 1
+
+  #print(total)
+
+  #pprint(("pokenumber",pokenumber))
+
+print(json.dumps(listdata, indent=4))
+master.putdata(newdata)
+
+#print( "saving master.jpg...")
+master.save("colormap.png")
+#print( "saved!")
 
