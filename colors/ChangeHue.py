@@ -5,38 +5,8 @@ import colorsys
 import glob
 import os
 from collections import Counter
+from pprint import pprint
 
-#rgb_to_hsv = np.vectorize(colorsys.rgb_to_hsv)
-#hsv_to_rgb = np.vectorize(colorsys.hsv_to_rgb)
-
-'''
-start_dir = "../images/full_sprites/opaque/kanto/"
-end_dir = "imagedata"
-
-#get your images using glob
-iconmap = os.listdir(start_dir)
-#iconMap = sorted(iconMap)
-
-print(len(iconmap))
-
-#for filename in iconmap:
-
-def shift_hue(arr, hout):
-    r, g, b, a = np.rollaxis(arr, axis=-1)
-    h, s, v = rgb_to_hsv(r, g, b)
-    h = (h+hout)%360
-    r, g, b = hsv_to_rgb(h, s, v)
-    arr = np.dstack((r, g, b, a))
-    return arr
-
-
-def changeHue(filename, offset):
-    image = Image.open(start_dir+filename)
-    image = image.convert('RGBA')
-    arr = np.array(np.asarray(image).astype('float'))
-    new_img = Image.fromarray(shift_hue(arr, offset/360.).astype('uint8'), 'RGBA')
-    new_img.save(end_dir+filename)
-'''
 
 
 # color, a rgb tuple
@@ -71,7 +41,7 @@ def closeness(color_a, color_b):
 
   maxh = max(ha, hb)
   minh = min(ha, hb)
-  difference = min((maxh-minh) ((minh+1)-maxh))
+  difference = min(maxh-minh, (minh+1)-maxh)
 
   return difference
 
@@ -82,12 +52,32 @@ def get_color_histogram(image):
   color_list = []
 
   for pix in image.getdata():
-    color_counts[pix] += 1
+    if pix[3] != 0:
+      color_counts[pix] += 1
 
-  for color, num in sorted(colors.items(), key=lambda x: x[1], reverse=True):
+  for color, num in sorted(color_counts.items(), key=lambda x: x[1], reverse=True):
     color_list.append(color)
 
   return color_list
+
+
+
+def is_grayscale(color):
+  r, g, b, a = color
+  return r == g == b
+
+
+def is_close_in_list(color_list, color):
+  # checks if a color is within 30 degrees of all others in a list
+
+  for c in color_list:
+    close = closeness(color, c)
+    if (close * 360) > 30:
+      return False
+  return True
+
+
+
 
 
 
@@ -124,27 +114,9 @@ def get_primary_secondary_tertiary(color_list):
   return (primary, secondary, tertiary, grayscale)
 
 
-def is_greyscale(color):
-  r, g, b, a = color
-  return r == g == b
 
 
-def is_close_in_list(color_list, color):
-  # checks if a color is within 30 degrees of all others in a list
-
-  for c in color_list:
-    closeness = closeness(color, c):
-      if (closeness * 360) > 30:
-        return False
-  return True
-
-
-
-
-
-
-
-
+'''
 def change_image(filename):
   image = Image.open(filename)
 
@@ -158,87 +130,45 @@ def change_image(filename):
   image.save(filename)
 
 change_image("images/full_sprites/transparent/kanto/002.png")
+'''
+
+
+def print15pix(colors, data):
+  for color in colors:
+    data.append(color)
+
+  for i in range(15 - len(colors)):
+    data.append((255,255,255,0))
 
 
 
-def rgb_to_hsv(color):
-  r, g, b, a = color
-  maxcolor = max(r, g, b)
-  mincolor = min(r, g, b)
-  v = maxcolor
+master = Image.new(
+  mode='RGBA',  
+  size=(60, 151), #40 px for color rows, 151 pokemon
+  color=(0,0,0,0))  # fully transparent
 
-  if maxcolor == 0:
-    s = 0
-  else:
-    s = (maxcolor - mincolor)/maxcolor
+start_dir = "images/full_sprites/transparent/kanto/"
+newdata = []
+listdata = []
+iconmap = os.listdir(start_dir)
 
-  if s == 0:
-    h = 0
-  else:
-    if r == maxcolor:
-      h = (g-b)/(maxcolor-mincolor)
-    elif g == maxcolor:
-      h = 2 + (b-r)/(maxcolor-mincolor)
-    elif b == maxcolor:
-      h = 4 + (r-g)/(maxcolor-mincolor)
-    else:
-      print("AAAAAHHHHH")
+pokenumber = 0
+for filename in iconmap:
+  pokenumber += 1
+  listdata.append((pokenumber, [])) # add (2, []) to the list
+  image = Image.open(start_dir+filename)
 
-    if (h<0):
-      h = 0
+  histo = get_color_histogram(image)
+  p, s, t, g = get_primary_secondary_tertiary(histo)
 
-  return (h*255, s*255, v*255)
+  print15pix(p, newdata)
+  print15pix(s, newdata)
+  print15pix(t, newdata)
+  print15pix(g, newdata)
 
-# http://lodev.org/cgtutor/color.html
-def hsv_to_rgb(color):
-  h, s, v = color
+  #pprint(("pokenumber",pokenumber))
 
-  h /= 255
-  s /= 255
-  v /= 255
-
-  if s == 0:
-    r = v
-    g = v
-    b = v
-
-  else:
-    h *= 6
-    i = floor(h)
-    f = h-i
-    p = v * (1 - s)
-    q = v * (1 - (s*f))
-    t = v * (1 - (s*(l-f)))
-
-    if i == 0:
-      r=v
-      g=t
-      b=p
-    if i == 1:
-      r=q
-      g=v
-      b=p
-    if i == 2:
-      r=p
-      g=v
-      b=t
-    if i == 3:
-      r=p
-      g=q
-      b=v
-    if i == 4:
-      r=t
-      g=p
-      b=v
-    if i == 5:
-      r=v
-      g=p
-      b=q
-
-  return (floor(r*255), floor(g*255), floor(b*255))
-
-
-
-
-
+#print(json.dumps(listdata, indent=2))
+master.putdata(newdata)
+master.save("./colors/colormap_split.png")
 
