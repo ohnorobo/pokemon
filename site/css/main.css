@@ -1,0 +1,49 @@
+@font-face {
+	font-family: "Pokedex";
+	src: url("../fonts/PixelMaster.ttf");
+}
+
+.pixelfont { font-family: "Pokedex"; }
+
+body {
+	background-image: url(../imgs/pattern/graphy.png);
+}
+
+#banner {
+	text-align: center;
+	color: white;
+	background: rgb(74,101,244);
+	background: -moz-linear-gradient(top,  rgb(74,101,244) 0%, rgb(34,52,150) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(74,101,244)), color-stop(100%,rgb(34,52,150)));
+	background: -webkit-linear-gradient(top,  rgb(74,101,244) 0%,rgb(34,52,150) 100%);
+	background: -o-linear-gradient(top,  rgb(74,101,244) 0%,rgb(34,52,150) 100%);
+	background: -ms-linear-gradient(top,  rgb(74,101,244) 0%,rgb(34,52,150) 100%);
+	background: linear-gradient(to bottom,  rgb(74,101,244) 0%,rgb(34,52,150) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a65f4', endColorstr='#223496',GradientType=0 );
+	height: 100px;
+}
+
+#banner h1 {
+	margin: 0;
+	font-size: 5.5em;
+	text-shadow: 3px 3px 0 #000;
+}
+
+#pokename {
+	text-align: center;
+	margin: 1em auto 0 auto;
+	padding: 0 .8em 0 .8em;
+	background-color: rgb(229,51,55);
+	border: 3px solid black;
+	border-radius: .4em;
+	width: 25%;
+}
+
+#inner-pokename {
+	background-color: white;
+	border: 3px solid pink;
+	border-left-width: 6px;
+	border-right-width: 6px;
+	font-size: 2em;
+	text-shadow: 1px 1px 0 rgb(168, 184, 184);
+}
