@@ -14,12 +14,13 @@ from PIL import Image
 import glob
 from collections import Counter
 from pprint import pprint
+import json
 
-start_dir = "images/full_sprites/transparent/kanto/"
+start_dir = "images/pokemonParts/body/"
 
 iconmap = os.listdir(start_dir)
 
-print(len(iconmap))
+#print(len(iconmap))
 master = Image.new(
     mode='RGBA',
     size=(50, 151), #50 px for color rows, 151 pokemon
@@ -27,9 +28,12 @@ master = Image.new(
 
 newdata = []
 
+listdata = []
 
 pokenumber = 0
 for filename in iconmap:
+  pokenumber += 1
+  listdata.append((pokenumber, [])) # add (2, []) to the list
   image = Image.open(start_dir+filename) 
 
   data = image.getdata()
@@ -42,24 +46,26 @@ for filename in iconmap:
 
   for color, num in sorted(colors.items(), key=lambda x: x[1], reverse=True):
     newdata.append(color)
-    pprint(color)
+
+    if color[3] != 0:
+      listdata[pokenumber-1][1].append(color)
+    #pprint(color)
     total += 1
 
-  print(total)
+  #print(total)
 
   for i in range(50-total): #transparent pixels
     newdata.append((255,255,255,0))
     total += 1
 
-  print(total)
+  #print(total)
 
-  pokenumber += 1
-  pprint(("pokenumber",pokenumber))
+  #pprint(("pokenumber",pokenumber))
 
-
+print(json.dumps(listdata, indent=4))
 master.putdata(newdata)
 
-print( "saving master.jpg...")
+#print( "saving master.jpg...")
 master.save("colormap.png")
-print( "saved!")
+#print( "saved!")
 
