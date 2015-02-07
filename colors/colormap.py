@@ -23,7 +23,7 @@ iconmap = os.listdir(start_dir)
 #print(len(iconmap))
 master = Image.new(
     mode='RGBA',
-    size=(50, 151), #50 px for color rows, 151 pokemon
+    size=(50, 19), #50 px for color rows, 151 pokemon
     color=(0,0,0,0))  # fully transparent
 
 newdata = []
