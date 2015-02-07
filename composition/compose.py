@@ -50,7 +50,7 @@ head_pinhole = (head["pinhole-x"], head["pinhole-y"])
 
 master.paste(body_image,(500, 500))
 coords = get_pinhole_match((500, 500), body_pinhole, head_pinhole)
-master.paste(head_image, coords)
+master.paste(head_image, coords, head_image)
 master.save("horror.png")
 
 
