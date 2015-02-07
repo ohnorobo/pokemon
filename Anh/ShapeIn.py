@@ -10,13 +10,13 @@ file = open("data.txt",'w')
 def findCrop(xdir):
     if not os.path.exists(xdir):
         xdir = start_dir+xdir
-    ydir = end_dir+xdir
+    filedir = os.path.split(xdir)
+    ydir = end_dir+os.path.split(filedir[0])[1]+'/'+filedir[1]
     try: 
         os.makedirs(os.path.split(ydir)[0])
     except OSError:
         if not os.path.isdir(os.path.split(ydir)[0]):
             raise
-    filename = os.path.split(xdir)[1]
     img = Image.open(xdir)
     data = img.load()
     l,w = img.size
@@ -33,6 +33,9 @@ def findCrop(xdir):
                 c = (max(c[0],x),min(c[1],y))
                 d = (max(d[0],x),max(d[1],y))
     
+    a = (a[0] -1, a[1]-1)
+    d = (d[0] +1,d[1]+1)
+
     new_img = img.crop(a+d)
 
     new_img.save(ydir)
