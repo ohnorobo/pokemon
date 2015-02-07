@@ -1,6 +1,6 @@
 #!/usr/local/bin/python3
 
-import yaml
+import json
 import random
 from PIL import Image
 from pprint import pprint
@@ -8,13 +8,13 @@ from pprint import pprint
 file_loc = "./images/croppedPokeParts/"
 
 def get_metadata():
-  f = open("./metadata/body.yaml", 'r')
-  bodies = yaml.load_all(f)
+  f = open("./metadata/body.json", 'r')
+  bodies = json.loads(f.read())
 
-  f = open("./metadata/head.yaml", 'r')
-  heads = yaml.load_all(f)
+  f = open("./metadata/head.json", 'r')
+  heads = json.loads(f.read())
 
-  return list(bodies), list(heads)
+  return bodies, heads
 
 
 # paste of the paste coords of the first image
@@ -29,8 +29,8 @@ def get_pinhole_match(paste, pinhole_a, pinhole_b):
 
 
 bodies, heads = get_metadata()
-body = random.choice(bodies[0])
-head = random.choice(heads[0])
+body = random.choice(bodies)
+head = random.choice(heads)
 
 pprint(body)
 pprint(head)
@@ -44,8 +44,8 @@ master = Image.new(
     size=(1000, 1000),
     color=(0,0,0,0))
 
-body_pinhole = (body["pinhole-x"], body["pinhole-y"])
-head_pinhole = (head["pinhole-x"], head["pinhole-y"])
+body_pinhole = body["needs"][0]["pinhole"]
+head_pinhole = head["pinhole"]
 
 
 master.paste(body_image,(500, 500))

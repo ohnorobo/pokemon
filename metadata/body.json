@@ -1,0 +1,26 @@
+[
+ {"filename": "body/1body.png",
+  "needs": [
+      { "type": "head",
+        "pinhole": [11, 15],
+        "min_size": 20
+      }
+    ]
+  },
+ {"filename": "body/2body.png",
+  "needs": [
+      { "type": "head",
+        "pinhole": [20, 10],
+        "min_size": 10
+      }
+    ]
+  },
+ {"filename": "body/4body.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [13, 5],
+       "min_size": 10
+      }
+    ]
+  }
+]

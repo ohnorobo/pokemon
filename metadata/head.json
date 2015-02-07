@@ -1,0 +1,14 @@
+[
+  { "filename": "head/13head.png",
+    "pinhole": [10, 15],
+    "size": 12
+  },
+  { "filename": "head/14head.png",
+    "pinhole": [10, 7],
+    "size": 18
+  },
+  { "filename": "head/15head.png",
+    "pinhole": [15, 7],
+    "size": 15
+  }
+]
