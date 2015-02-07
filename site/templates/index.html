@@ -8,12 +8,44 @@
 	<title>Missing No.</title>
 </head>
 <body>
-	<div id="banner" class="pixelfont"><h1>Hack Beanpot's Pokédex!</h1></div>
+	<div id="banner"><h1>Hack Beanpot's Pokédex!</h1></div>
 	<div id="pokedex-wrapper">
-		<div id="pokename">
-			<div id="inner-pokename" class="pixelfont">{{pokename}}</div>
+		<div class="pokename-border">
+			<div class="pokename" class="pixelfont">{{pokename}}</div>
 		</div>
 		<div id="pokesprite"><img src="../static/imgs/kanto/{{pokemon}}" width="96" height="103" alt="pokemon sprite"></div>
+
+		<!-- Pokemon Info -->
+		<div id="pokemon-info">
+				<div id="type1" class="type">
+					<div class="grass type-inner">
+						GRASS
+					</div>
+				</div>
+				<div id="type2" class="type">
+					<div class="poison type-inner">
+						POISON
+					</div>
+				</div>
+			<div class="info">
+				<div class="info-upper">
+					<div class="info-desc">Height</div>
+					<div class="info-value">0.7m</div>
+				</div>
+				<div class="info-bottom">
+					<div class="info-desc">Weight</div>
+					<div class="info-value">6.9kg</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Pokemon Description -->
+		<div class="description-border">
+			<div class="description">
+				Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.
+			</div>
+		</div>
 	</div>
+	
 </body>
 </html>
