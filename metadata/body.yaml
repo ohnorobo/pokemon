@@ -1,0 +1,19 @@
+---
+- "filename": "body/1body.png"
+  "type": "head"
+  "pinhole-x": 10
+  "pinhole-y": 7
+  "min_size": 10
+
+- "filename": "body/2body.png"
+  "type": "head"
+  "pinhole-x": 20
+  "pinhole-y": 10
+  "min_size": 10
+
+- "filename": "body/4body.png"
+  "type": "head"
+  "pinhole-x": 13
+  "pinhole-y": 5
+  "min_size": 10
+
