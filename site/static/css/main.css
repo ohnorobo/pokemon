@@ -58,3 +58,112 @@ body {
 	text-align: center;
 	-webkit-box-reflect: below -10px -webkit-linear-gradient(bottom, rgba(255,255,255,0.3) 0%, transparent 40%, transparent 100%);
 }
+
+.type {
+	border: 2px solid black;
+	border-radius: 4px;
+	color: white;
+	font-family: 'Pokedex';
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: .5em;
+	text-align: center;
+	text-shadow: 1px 1px 0 #404040;
+	width: 5%;
+}
+
+.type-inner {
+	border: 2px solid;
+	border-radius: 2px;
+	height: 1.15em;
+}
+
+.bug {
+	background-color: #62c594;
+	border-color: #8be6b4 #318b62 #318b62 #8be6b4;	
+}
+
+.dark {
+	background-color: #5a4a4a;
+	border-color: #947f7f #201515 #201515 #947f7f;	
+}
+
+.dragon {
+	background-color: #526aa4;
+	border-color: #738bbd #293162 #293162 #738bbd;
+}
+
+.electr {
+	background-color: #fed541;
+	border-color: #feeebd #d5ac08 #d5ac08 #feeebd;
+}
+
+.fairy {
+	background-color: #f79786;
+	border-color: #f7b99f #d46d5d #d46d5d #f7b99f;
+}
+
+.fight {
+	background-color: #f87070;
+	border-color: #f8a8a8 #d04040 #d04040 #f8a8a8;
+}
+
+.fire {
+	background-color: #f89030;
+	border-color: #fabf96 #c06820 #c06820 #f8c090;
+}
+
+.flying {
+	background-color: #58c8f0;
+	border-color: #b8e8f8 #30a0b8 #30a0b8 #b8e8f8;
+}
+
+.ghost {
+	background-color: #a870f8;
+	border-color: #d0b0f8 #7858b0 #7858b0 #d0b0f8;
+}
+
+.grass {
+	background-color: #90e880;
+	border-color: #d8f0c0 #58b848 #58b848 #d8f0c0;
+}
+
+.ground {
+	background-color: #debd8b;
+	border-color: #eedeac #a4834a #a4834a #eedeac;
+}
+
+.ice {
+	background-color: #c1cdfe;
+	border-color: #dfe6fe #798cdd #798cdd #dfe6fe;
+}
+
+.normal {
+	background-color: #dddde1;
+	border-color: #f5f5f5 #a0a0a6 #a0a0a6 #f5f5f5;
+}
+
+.poison {
+	background-color: #e090f8;
+	border-color: #f0d0f8 #b848e0 #b848e0 #f0d0f8;
+}
+
+.psychc {
+	background-color: #fc81c3;
+	border-color: #febde0 #da4896 #da4896 #febde0;
+}
+
+.rock {
+	background-color: #b57b5a;
+	border-color: #c89f88 #7b4e35 #7a4f34 #c89f88;	
+}
+
+.steel {
+	background-color: #b8b8d0;
+	border-color: #ebebf6 #8585aa #8585aa #ebebf6;
+}
+
+.water {
+	background-color: #718bfe;
+	border-color: #a1b2fe #3d54bd #3c54bc #a1b2fe;
+}
