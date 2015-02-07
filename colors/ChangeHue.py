@@ -64,15 +64,18 @@ def get_color_histogram(image):
 
 def is_grayscale(color):
   r, g, b, a = color
-  return r == g == b
+  #print((r, g, b, a))
+  diff = abs(r-g) + abs(g-b) + abs(b-r)
+  #s = r+g+b
+  return diff < 20 #or s > 700 or s < 150
 
 
-def is_close_in_list(color_list, color):
+def is_close_in_list(color_list, color, degree):
   # checks if a color is within 30 degrees of all others in a list
 
   for c in color_list:
     close = closeness(color, c)
-    if (close * 360) > 30:
+    if (close * 360) > degree:
       return False
   return True
 
@@ -85,7 +88,7 @@ def is_close_in_list(color_list, color):
 # http://www.alexonsager.net/2013/06/behind-the-scenes-pokemon-fusion/
 # breaks the colors into three lists 
 # (and a secret 4th list for grayscale)
-def get_primary_secondary_tertiary(color_list):
+def get_primary_secondary_tertiary(color_list, degree):
   # pick the smallest # of clusters such that 
   # the distance between 2 hues in a cluster is never more than 30 (?) degrees
   # primary colors have to be matched between pokemon merges
@@ -95,23 +98,28 @@ def get_primary_secondary_tertiary(color_list):
   secondary = []
   tertiary = []
   grayscale = []
+  aux = []
 
-  primary.append(color_list[0])
-  color_list = color_list[1:]
+  while(len(primary) == 0 and len(color_list) != 0):
+    if is_grayscale(color_list[0]):
+      grayscale.append(color_list[0])
+    else:
+      primary.append(color_list[0])
+    color_list = color_list[1:]
 
   for color in color_list:
     if is_grayscale(color):
       grayscale.append(color)
-    elif is_close_in_list(primary, color):
+    elif is_close_in_list(primary, color, degree):
       primary.append(color)
-    elif is_close_in_list(secondary, color):
+    elif is_close_in_list(secondary, color, degree):
       secondary.append(color)
-    elif is_close_in_list(tertiary, color):
+    elif is_close_in_list(tertiary, color, degree):
       tertiary.append(color)
     else:
-      pprint(("NON CLOSE COLOR", color))
+      aux.append(color)
 
-  return (primary, secondary, tertiary, grayscale)
+  return (primary, secondary, tertiary, grayscale, aux)
 
 
 
@@ -144,10 +152,11 @@ def print15pix(colors, data):
 
 master = Image.new(
   mode='RGBA',  
-  size=(60, 151), #40 px for color rows, 151 pokemon
+  size=(75, 151), #40 px for color rows, 151 pokemon
   color=(0,0,0,0))  # fully transparent
 
 start_dir = "images/full_sprites/transparent/kanto/"
+#start_dir = "images/test/"
 newdata = []
 listdata = []
 iconmap = os.listdir(start_dir)
@@ -159,12 +168,15 @@ for filename in iconmap:
   image = Image.open(start_dir+filename)
 
   histo = get_color_histogram(image)
-  p, s, t, g = get_primary_secondary_tertiary(histo)
+  p, s, t, g, a= get_primary_secondary_tertiary(histo, 35)
+  if len(t) == 0:
+    p, s, t, g, a = get_primary_secondary_tertiary(histo, 20)
 
   print15pix(p, newdata)
   print15pix(s, newdata)
   print15pix(t, newdata)
   print15pix(g, newdata)
+  print15pix(a, newdata)
 
   #pprint(("pokenumber",pokenumber))
 

@@ -37,6 +37,7 @@ body {
 	border: 3px solid black;
 	border-radius: .4em;
 	width: 25%;
+	box-shadow: .5em .5em 0 rgb(168, 184, 184);
 }
 
 #inner-pokename {
@@ -46,4 +47,14 @@ body {
 	border-right-width: 6px;
 	font-size: 2em;
 	text-shadow: 1px 1px 0 rgb(168, 184, 184);
+}
+
+#pokesprite {
+	margin-top: 10px;
+	width: 100px;
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	-webkit-box-reflect: below -10px -webkit-linear-gradient(bottom, rgba(255,255,255,0.3) 0%, transparent 40%, transparent 100%);
 }
