@@ -222,5 +222,239 @@
        "min_size": 10
       }
     ]
+  },
+{"filename": "body/038.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [31, 30],
+       "min_size": 10
+      }
+    ]
+  },
+{"filename": "body/041.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [28, 47],
+       "min_size": 10
+      }
+    ]
+  },    
+{"filename": "body/042.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [21, 38],
+       "min_size": 10
+      }
+    ]
+  },       
+{"filename": "body/043.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [28, 45],
+       "min_size": 10
+      }
+    ]
+  }, 
+{"filename": "body/048.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [32, 32],
+       "min_size": 10
+      }
+    ]
+  },        
+{"filename": "body/049.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [15, 37],
+       "min_size": 10
+      }
+    ]
+  },    
+{"filename": "body/050.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [26, 26],
+       "min_size": 10
+      }
+    ]
+  },        
+{"filename": "body/051.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [7, 30],
+       "min_size": 10
+      }
+    ]
+  },            
+{"filename": "body/053.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [26, 26],
+       "min_size": 10
+      }
+    ]
+  },          
+{"filename": "body/053.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [17, 46],
+       "min_size": 10
+      }
+    ]
+  },            
+{"filename": "body/057.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [16, 26],
+       "min_size": 10
+      }
+    ]
+  },            
+{"filename": "body/058.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [26, 45],
+       "min_size": 10
+      }
+    ]
+  },          
+{"filename": "body/059.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [24, 32],
+       "min_size": 10
+      }
+    ]
+  },            
+{"filename": "body/060.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [20, 25],
+       "min_size": 10
+      }
+    ]
+  },            
+{"filename": "body/061.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [27, 49],
+       "min_size": 10
+      }
+    ]
+  },            
+{"filename": "body/062.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [15, 22],
+       "min_size": 10
+      }
+    ]
+  },  
+{"filename": "body/063.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [5, 33],
+       "min_size": 10
+      }
+    ]
+  },            
+{"filename": "body/064.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [6, 8],
+       "min_size": 10
+      }
+    ]
+  },          
+{"filename": "body/068.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [28, 39],
+       "min_size": 10
+      }
+    ]
+  },        
+{"filename": "body/070.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [27, 39],
+       "min_size": 10
+      }
+    ]
+  }, 
+{"filename": "body/071.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [28, 40],
+       "min_size": 10
+      }
+    ]
+  },            
+{"filename": "body/072.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [26, 46],
+       "min_size": 10
+      }
+    ]
+  },            
+{"filename": "body/074.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [16, 46],
+       "min_size": 10
+      }
+    ]
+  },            
+{"filename": "body/076.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [17, 13],
+       "min_size": 10
+      }
+    ]
+  },            
+{"filename": "body/077.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [22, 55],
+       "min_size": 10
+      }
+    ]
+  },            
+{"filename": "body/079.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [12, 25],
+       "min_size": 10
+      }
+    ]
+  }, 
+{"filename": "body/080.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [25, 32],
+       "min_size": 10
+      }
+    ]
+  },    
+{"filename": "body/081.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [9, 30],
+       "min_size": 10
+      }
+    ]
+  },            
+    {"filename": "body/082.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [13, 29],
+       "min_size": 10
+      }
+    ]
   }
+    
+    
 ]
