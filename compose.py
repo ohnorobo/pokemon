@@ -32,13 +32,10 @@ def get_pinhole_match(paste, pinhole_a, pinhole_b, imagea, imageb):
   y = paste[1] + (imagea.size[1] - pinhole_a[1]) - pinhole_b[1]
   return (x, y)
 
-def get_pinhole_match_unflip(paste, pinhole_a, pinhole_b, imagea, imageb):
+def get_pinhole_match_beta(paste, pinhole_a, pinhole_b, imagea, imageb):
   x = paste[0] + pinhole_a[0] - pinhole_b[0]
-  y = paste[1] + pinhole_a[1] - pinhole_b[1]
+  y = paste[1] + (imagea.size[1] - pinhole_a[1]) - (imageb.size[1] - pinhole_b[1])
   return (x, y)
-
-
-
 
 def paste_in():
   pass
@@ -47,13 +44,11 @@ def paste_in():
 def crop(img):
     data = img.load()
     l,w = img.size
-    print l,w
     a = (l,w)
     b = (l,0)
     c = (0,w)
     d = (0,0)
 
-    print((a, b, c, d))
 
     for x in range(0,l-1):
         for y in range(0,w-1):
@@ -63,7 +58,6 @@ def crop(img):
                 c = (max(c[0],x),min(c[1],y))
                 d = (max(d[0],x),max(d[1],y))
 
-    print((a, b, c, d))
 
     a = (a[0] -1, a[1]-1)
     d = (d[0] +1,d[1]+1)
@@ -85,9 +79,9 @@ def generate_image():
   head = random.choice(heads)
   tail = random.choice(tails)
 
-  pprint(body)
-  pprint(head)
-
+#  pprint(body)
+#  pprint(head)
+#  pprint(tail)
 
   body_image = Image.open(file_loc+body["filename"])
   head_image = Image.open(file_loc+head["filename"])
@@ -98,34 +92,24 @@ def generate_image():
       size=(300, 300),
       color=(0,0,0,0))
 
-  
   head_pinhole = head["pinhole"]
   tail_pinhole = tail["needs"][0]["pinhole"]
-
-  
-
-
   if len(body["needs"])>1:
     body_pinhole = body["needs"][1]["pinhole"]
-    coords = get_pinhole_match((150,150),
+    coords = get_pinhole_match_beta((150,150),
                                body_pinhole,tail_pinhole,
                                body_image, tail_image)
     master.paste(tail_image, coords, tail_image)
-
-
-  master.paste(body_image,(150, 150), body_image)
   body_pinhole = body["needs"][0]["pinhole"]
-
+  master.paste(body_image,(150, 150),body_image)
   coords = get_pinhole_match((150, 150),
                               body_pinhole, head_pinhole,
                               body_image, head_image)
-
   master.paste(head_image, coords, head_image)
-
-  master=crop(master)
-  master=embiggen(master)
-  master.save("../site/static/imgs/horror.png") 
   
+  master = crop(master)
+  master = embiggen(master)
+  master.save("../site/static/imgs/horror.png") 
+
  # for i in body_pinhole["needs"]:
  #   body_pinhole = i["pinhole"]
-
