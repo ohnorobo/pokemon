@@ -290,7 +290,7 @@
 {"filename": "body/053.png",
   "needs": [
      { "type": "head",
-       "pinhole": [26, 26],
+       "pinhole": [17, 44],
        "min_size": 10
       }
     ]
