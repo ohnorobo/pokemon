@@ -94,8 +94,18 @@ img {
 
 }
 
+#type1 span {
+	text-transform: uppercase;
+	margin: 0;
+}
+
 #type2 {
 	/* margin-left: 5%; */
+}
+
+#type2 span {
+	text-transform: uppercase;
+	margin: 0;
 }
 
 .type {
