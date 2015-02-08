@@ -94,8 +94,16 @@ img {
 
 }
 
+#type1 p {
+	text-transform: capitalize;
+}
+
 #type2 {
 	/* margin-left: 5%; */
+}
+
+#type2 p {
+	text-transform: capitalize;
 }
 
 .type {

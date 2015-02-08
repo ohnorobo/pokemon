@@ -12,20 +12,22 @@ app = flask.Flask(__name__, static_folder="/var/www/pokemon/site/static")
 
 
 names = [line.strip() for line in open("../pokemon_names.txt", "r")]
+types = [line.strip() for line in open("../types.txt", "r")]
 
 
 def randomize_name():
     return random.choice(names)
 
 
-def random_pokemon():
-    numberstring = "{:0>3d}.png".format(random.choice(range(0, 151)))
-    return numberstring
+def random_types():
+    return random.sample(types, 2)
+
+type_choice = random_types()
 
 @app.route('/')
 def index():
     make_image()
-    return flask.render_template("index.html", pokename=randomize_name())
+    return flask.render_template("index.html", pokename=randomize_name(), type1=type_choice[0], type2=type_choice[1])
 
 
 def make_image():
