@@ -93,12 +93,12 @@ def generate_image():
   
   head_pinhole = head["pinhole"]
   tail_pinhole = tail["needs"][0]["pinhole"]
- if len(body["needs"])>1:
-   body_pinhole = body["needs"][1]["pinhole"]
-   coords = get_pinhole_match((150,150),
-                              body_pinhole,tail_pinhole,
-                              body_image, tail_image)
-   master.paste(tail_image, coords, tail_image)
+  if len(body["needs"])>1:
+    body_pinhole = body["needs"][1]["pinhole"]
+    coords = get_pinhole_match((150,150),
+                               body_pinhole,tail_pinhole,
+                               body_image, tail_image)
+    master.paste(tail_image, coords, tail_image)
   master.paste(body_image,(150, 150))
   body_pinhole = body["needs"][0]["pinhole"]
   coords = get_pinhole_match((150, 150),
