@@ -1,4 +1,4 @@
-# pokemon
+# [FrankenPokemon](http://frankenpokemon.me/)
 
 Use pokemon sprites to generate new and horrifying pokemon
 
