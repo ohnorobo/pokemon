@@ -18,7 +18,7 @@
         "min_size": 10
       },
       {"type": "tail",
-       "pinhole": [41, 20],
+       "pinhole": [41, 15],
        "min_size": 20
       }
     ]
@@ -252,11 +252,11 @@
 {"filename": "body/30body.png",
   "needs": [
      { "type": "head",
-       "pinhole": [13, 23],
+       "pinhole": [10, 18],
        "min_size": 10
       },
       {"type": "tail",
-       "pinhole": [22, 12],
+       "pinhole": [20, 10],
        "min_size": 20
       }
     ]
@@ -340,7 +340,7 @@
        "min_size": 10
       },
       {"type": "tail",
-       "pinhole": [39, 24],
+       "pinhole": [39, 19],
        "min_size": 20
       }
     ]
