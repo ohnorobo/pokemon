@@ -14,10 +14,10 @@ def get_metadata():
   f = open("../metadata/body.json", 'r')
   bodies = json.loads(f.read())
 
-  f = open("./metadata/head.json", 'r')
+  f = open("../metadata/head.json", 'r')
   heads = json.loads(f.read())
 
-  f = open("./metadata/tail.json", 'r')
+  f = open("../metadata/tail.json", 'r')
   tails = json.loads(f.read())
 
   return bodies, heads, tails
