@@ -1,14 +1,278 @@
 [
-  { "filename": "head/13head.png",
-    "pinhole": [10, 15],
+  { "filename": "head/1head.png",
+    "pinhole": [12, 10],
     "size": 12
-  },
-  { "filename": "head/14head.png",
-    "pinhole": [10, 7],
+  }, 
+  { "filename": "head/2head.png",
+    "pinhole": [13,12],
     "size": 18
-  },
+  }, 
+  { "filename": "head/4head.png",
+    "pinhole": [8,10],
+    "size": 15
+  }, 
+  { "filename": "head/5head.png",
+    "pinhole": [10,10],
+    "size": 15
+  }, 
+  { "filename": "head/6head.png",
+    "pinhole": [30,28],
+    "size": 15
+  }, 
+  { "filename": "head/7head.png",
+    "pinhole": [10,10],
+    "size": 15
+  }, 
+  { "filename": "head/8head.png",
+    "pinhole": [16,16],
+    "size": 15
+  }, 
+  { "filename": "head/9head.png",
+    "pinhole": [14,13],
+    "size": 15
+  }, 
+  { "filename": "head/10head.png",
+    "pinhole": [11,10],
+    "size": 15
+  }, 
+  { "filename": "head/12head.png",
+    "pinhole": [9,17],
+    "size": 15
+  }, 
+  { "filename": "head/13head.png",
+    "pinhole": [10,11],
+    "size": 15
+  }, 
+  { "filename": "head/14head.png",
+    "pinhole": [11,10],
+    "size": 15
+  }, 
   { "filename": "head/15head.png",
-    "pinhole": [15, 7],
+    "pinhole": [11,10],
+    "size": 15
+  }, 
+  { "filename": "head/16head.png",
+    "pinhole": [17,24],
+    "size": 15
+  }, 
+  { "filename": "head/17head.png",
+    "pinhole": [16,23],
+    "size": 15
+  }, 
+  { "filename": "head/18head.png",
+    "pinhole": [35,25],
+    "size": 15
+  }, 
+  { "filename": "head/19head.png",
+    "pinhole": [26,29],
+    "size": 15
+  }, 
+  { "filename": "head/20head.png",
+    "pinhole": [12,11],
+    "size": 15
+  }, 
+  { "filename": "head/21head.png",
+    "pinhole": [21,19],
+    "size": 15
+  }, 
+  { "filename": "head/22head.png",
+    "pinhole": [10,11],
+    "size": 15
+  }, 
+  { "filename": "head/23head.png",
+    "pinhole": [13,12],
+    "size": 15
+  }, 
+  { "filename": "head/25head.png",
+    "pinhole": [14,13],
+    "size": 15
+  }, 
+  { "filename": "head/26head.png",
+    "pinhole": [14,13],
+    "size": 15
+  }, 
+  { "filename": "head/27head.png",
+    "pinhole": [9,9],
+    "size": 15
+  }, 
+  { "filename": "head/29head.png",
+    "pinhole": [10,14],
+    "size": 15
+  }, 
+  { "filename": "head/30head.png",
+    "pinhole": [26,17],
+    "size": 15
+  }, 
+  { "filename": "head/031.png",
+    "pinhole": [31,27],
+    "size": 15
+  }, 
+  { "filename": "head/032.png",
+    "pinhole": [12,13],
+    "size": 15
+  }, 
+  { "filename": "head/033.png",
+    "pinhole": [14,14],
+    "size": 15
+  }, 
+  { "filename": "head/034.png",
+    "pinhole": [14,12],
+    "size": 15
+  }, 
+  { "filename": "head/035.png",
+    "pinhole": [26,19],
+    "size": 15
+  }, 
+  { "filename": "head/036.png",
+    "pinhole": [18,16],
+    "size": 15
+  }, 
+  { "filename": "head/037.png",
+    "pinhole": [31,31],
+    "size": 15
+  }, 
+  { "filename": "head/038.png",
+    "pinhole": [14,13],
+    "size": 15
+  }, 
+  { "filename": "head/039.png",
+    "pinhole": [24,22],
+    "size": 15
+  }, 
+  { "filename": "head/045.png",
+    "pinhole": [18,17],
+    "size": 15
+  }, 
+  { "filename": "head/046.png",
+    "pinhole": [15,15],
+    "size": 15
+  }, 
+  { "filename": "head/047.png",
+    "pinhole": [22,23],
+    "size": 15
+  }, 
+  { "filename": "head/048.png",
+    "pinhole": [25,15],
+    "size": 15
+  }, 
+  { "filename": "head/049.png",
+    "pinhole": [32,23],
+    "size": 15
+  }, 
+  { "filename": "head/050.png",
+    "pinhole": [12,11],
+    "size": 15
+  }, 
+  { "filename": "head/056.png",
+    "pinhole": [28,28],
+    "size": 15
+  }, 
+  { "filename": "head/057.png",
+    "pinhole": [18,17],
+    "size": 15
+  }, 
+  { "filename": "head/058.png",
+    "pinhole": [19,16],
+    "size": 15
+  }, 
+  { "filename": "head/059.png",
+    "pinhole": [26,12],
+    "size": 15
+  }, 
+  { "filename": "head/060.png",
+    "pinhole": [24,18],
+    "size": 15
+  }, 
+  { "filename": "head/061.png",
+    "pinhole": [18,13],
+    "size": 15
+  }, 
+  { "filename": "head/062.png",
+    "pinhole": [13,11],
+    "size": 15
+  }, 
+  { "filename": "head/063.png",
+    "pinhole": [14,15],
+    "size": 15
+  }, 
+  { "filename": "head/064.png",
+    "pinhole": [15,15],
+    "size": 15
+  }, 
+  { "filename": "head/065.png",
+    "pinhole": [21,22],
+    "size": 15
+  }, 
+  { "filename": "head/066.png",
+    "pinhole": [20,22],
+    "size": 15
+  }, 
+  { "filename": "head/067.png",
+    "pinhole": [25,26],
+    "size": 15
+  }, 
+  { "filename": "head/068.png",
+    "pinhole": [18,11],
+    "size": 15
+  }, 
+  { "filename": "head/069.png",
+    "pinhole": [10,10],
+    "size": 15
+  }, 
+  { "filename": "head/070.png",
+    "pinhole": [17,17],
+    "size": 15
+  }, 
+  { "filename": "head/071.png",
+    "pinhole": [13,16],
+    "size": 15
+  }, 
+  { "filename": "head/072.png",
+    "pinhole": [11,13],
+    "size": 15
+  }, 
+  { "filename": "head/073.png",
+    "pinhole": [19.27],
+    "size": 15
+  }, 
+  { "filename": "head/074.png",
+    "pinhole": [19,19],
+    "size": 15
+  }, 
+  { "filename": "head/075.png",
+    "pinhole": [19,29],
+    "size": 15
+  }, 
+  { "filename": "head/076.png",
+    "pinhole": [25,23],
+    "size": 15
+  }, 
+  { "filename": "head/077.png",
+    "pinhole": [14,12],
+    "size": 15
+  }, 
+  { "filename": "head/078.png",
+    "pinhole": [18,15],
+    "size": 15
+  }, 
+  { "filename": "head/079.png",
+    "pinhole": [15,21],
+    "size": 15
+  }, 
+  { "filename": "head/080.png",
+    "pinhole": [19,16],
+    "size": 15
+  }, 
+  { "filename": "head/081.png",
+    "pinhole": [15,19],
+    "size": 15
+  }, 
+  { "filename": "head/082.png",
+    "pinhole": [16,21],
+    "size": 15
+  }, 
+  { "filename": "head/083.png",
+    "pinhole": [11,12],
     "size": 15
   }
 ]
