@@ -8,8 +8,8 @@ import flask
 import random
 import compose, markov
 
-#app = flask.Flask(__name__, static_folder="/Users/slaplante/projects/pokemon/site/static")
-app = flask.Flask(__name__, static_folder="/var/www/pokemon/site/static")
+app = flask.Flask(__name__, static_folder="/Users/slaplante/projects/pokemon/site/static")
+#app = flask.Flask(__name__, static_folder="/var/www/pokemon/site/static")
 
 
 names = [line.strip() for line in open("../pokemon_names.txt", "r")]
@@ -37,23 +37,35 @@ def height():
 def weight():
   return str(round(random.uniform(.01, 100), 1)) + random.choice(weight_units)
 
+def get_image_filename(ids):
+    print(("IDS",ids))
+    return "-".join(str(v) for v in ids) + ".png"
+
+def make_image():
+    return compose.generate_image()
+
+
+
+
+@app.route('/<ids>')
+def id_index(ids):
+    pass
+
 
 @app.route('/')
 def index():
-    make_image()
+    ## TODO add url changing
+    ids = make_image()
     name=randomize_name()
     type_choice = random_types()
     return flask.render_template("index.html",
              pokename=name,
+             image=get_image_filename(ids),
              type1=type_choice[0],
              type2=type_choice[1],
              height=height(),
              weight=weight(),
              description=random_text(name).decode('utf-8'))
-
-
-def make_image():
-    compose.generate_image()
 
 
 if __name__ == '__main__':
