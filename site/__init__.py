@@ -6,7 +6,7 @@ sys.path.insert(0, parentdir)
 
 import flask
 import random
-import compose
+import compose, markov
 
 #app = flask.Flask(__name__, static_folder="/Users/slaplante/projects/pokemon/site/static")
 app = flask.Flask(__name__, static_folder="/var/www/pokemon/site/static")
@@ -18,6 +18,12 @@ types = [line.strip() for line in open("../types.txt", "r")]
 length_units = ["m", "ft", "yards", "cm", "smts", "rod"]
 weight_units = ["lbs", "kg", "drams", "stone", "mg"]
 
+
+
+def random_text(name):
+    text = markov.get_text()
+    text = text.replace("<NAME>", name)
+    return text
 
 def randomize_name():
     return random.choice(names)
@@ -35,14 +41,15 @@ def weight():
 @app.route('/')
 def index():
     make_image()
+    name=randomize_name()
     type_choice = random_types()
     return flask.render_template("index.html",
-             pokename=randomize_name(),
+             pokename=name,
              type1=type_choice[0],
              type2=type_choice[1],
              height=height(),
              weight=weight(),
-             description="lololol")
+             description=random_text(name).decode('utf-8'))
 
 
 def make_image():
