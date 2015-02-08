@@ -74,7 +74,7 @@
 {"filename": "Tails/25tail.png",
   "needs": [
      { "type": "tail",
-       "pinhole": [25, 9],
+       "pinhole": [5, 10],
        "min_size": 10
       }
     ]
