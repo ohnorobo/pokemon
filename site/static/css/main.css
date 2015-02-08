@@ -145,10 +145,10 @@ img {
 }
 
 #pokesprite {
-	margin-top: 10px;
+	margin-top: -40px;
 	margin-left: auto;
 	margin-right: auto;
-  margin-bottom: 70px;
+  	margin-bottom: 70px;
 	text-align: center;
 	-webkit-box-reflect: below -0px -webkit-linear-gradient(bottom, rgba(255,255,255,0.3) 0%, transparent 20%, transparent 100%);
 }
