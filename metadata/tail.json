@@ -1,0 +1,26 @@
+[
+ {"filename": "tail/4tail.png",
+  "needs": [
+      { "type": "tail",
+        "pinhole": [11, 15],
+        "min_size": 20
+      }
+    ]
+  },
+ {"filename": "tail/5tail.png",
+  "needs": [
+      { "type": "tail",
+        "pinhole": [20, 10],
+        "min_size": 10
+      }
+    ]
+  },
+ {"filename": "tail/6tail.png",
+  "needs": [
+     { "type": "tail",
+       "pinhole": [13, 5],
+       "min_size": 10
+      }
+    ]
+  }
+]
