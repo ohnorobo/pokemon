@@ -53,6 +53,9 @@ def crop(img):
 
     return img.crop(a+d)
 
+def same_size():
+  pass
+
 
 FACTOR = 3
 def embiggen(img):
