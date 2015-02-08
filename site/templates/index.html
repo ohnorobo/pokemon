@@ -6,6 +6,25 @@
 	<link rel="stylesheet" href="../static/css/normalize.css">
 	<link rel="stylesheet" href="../static/css/main.css">
 	<title>Missing No.</title>
+	<script type="text/javascript">
+		// Wait for the page to load first
+		window.onload = function() {
+			//Get a reference to the link on the page
+			// with an id of "arrow"
+			var a = document.getElementById("left-arrow");	
+			var b = document.getElementById("right-arrow");	
+			//Set code to run when the link is clicked
+			// by assigning a function to "onclick"
+			a.onclick = function() {
+				location.reload(forceGet);
+				return false;
+			}
+			b.onclick = function() {
+				location.reload(forceGet);
+				return false;
+			}
+		}
+	</script>
 </head>
 <body>
 	<img src="../static/imgs/veridian-forest.png" id="bg" alt="">
