@@ -8,8 +8,8 @@ import flask
 import random
 import compose, markov
 
-app = flask.Flask(__name__, static_folder="/Users/slaplante/projects/pokemon/site/static")
-#app = flask.Flask(__name__, static_folder="/var/www/pokemon/site/static")
+#app = flask.Flask(__name__, static_folder="/Users/slaplante/projects/pokemon/site/static")
+app = flask.Flask(__name__, static_folder="/var/www/pokemon/site/static")
 
 
 names = [line.strip() for line in open("../pokemon_names.txt", "r")]
@@ -48,16 +48,30 @@ def make_image():
 @app.route('/<ids>')
 def id_index(ids):
     ids = ids.split('-')
+    filename = get_image_filename(ids)
     name=randomize_name()
     type_choice = random_types()
-    return flask.render_template("index.html",
-             pokename=name,
-             image=get_image_filename(ids),
-             type1=type_choice[0],
-             type2=type_choice[1],
-             height=height(),
-             weight=weight(),
-             description=random_text(name).decode('utf-8'))
+
+
+    if not os.path.isfile("../site/static/imgs/generated/"+filename):
+      return flask.render_template("index.html",
+               pokename=name,
+               image="missingno.png",
+               type1=type_choice[0],
+               type2=type_choice[1],
+               height=height(),
+               weight=weight(),
+               description=random_text(name).decode('utf-8'))
+
+    else:
+      return flask.render_template("index.html",
+               pokename=name,
+               image=filename,
+               type1=type_choice[0],
+               type2=type_choice[1],
+               height=height(),
+               weight=weight(),
+               description=random_text(name).decode('utf-8'))
 
 
 @app.route('/')
