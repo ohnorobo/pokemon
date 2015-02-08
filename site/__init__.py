@@ -45,11 +45,19 @@ def make_image():
     return compose.generate_image()
 
 
-
-
 @app.route('/<ids>')
 def id_index(ids):
-    pass
+    ids = ids.split('-')
+    name=randomize_name()
+    type_choice = random_types()
+    return flask.render_template("index.html",
+             pokename=name,
+             image=get_image_filename(ids),
+             type1=type_choice[0],
+             type2=type_choice[1],
+             height=height(),
+             weight=weight(),
+             description=random_text(name).decode('utf-8'))
 
 
 @app.route('/')
