@@ -47,8 +47,9 @@ img {
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 130px;
-	height: 650px;
+	height: 750px;
 	width: 500px;
+	border-radius: 30px;
 }
 
 .pokename-border {
