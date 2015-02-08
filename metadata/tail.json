@@ -2,7 +2,7 @@
  {"filename": "Tails/4tail.png",
   "needs": [
       { "type": "tail",
-        "pinhole": [11, 15],
+        "pinhole": [2, 4],
         "min_size": 20
       }
     ]
@@ -18,7 +18,7 @@
  {"filename": "Tails/6tail.png",
   "needs": [
      { "type": "tail",
-       "pinhole": [33, 8],
+       "pinhole": [33, 21],
        "min_size": 10
       }
     ]
@@ -74,7 +74,7 @@
 {"filename": "Tails/25tail.png",
   "needs": [
      { "type": "tail",
-       "pinhole": [5, 10],
+       "pinhole": [4, 17],
        "min_size": 10
       }
     ]
