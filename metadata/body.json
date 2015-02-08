@@ -2,7 +2,7 @@
  {"filename": "body/1body.png",
   "needs": [
       { "type": "head",
-        "pinhole": [11, 15],
+        "pinhole": [11, 20],
         "min_size": 20
       }
     ]
@@ -10,7 +10,7 @@
  {"filename": "body/2body.png",
   "needs": [
       { "type": "head",
-        "pinhole": [20, 10],
+        "pinhole": [16, 20],
         "min_size": 10
       }
     ]
@@ -18,7 +18,7 @@
  {"filename": "body/4body.png",
   "needs": [
      { "type": "head",
-       "pinhole": [13, 5],
+       "pinhole": [13,35],
        "min_size": 10
       }
     ]
@@ -110,7 +110,7 @@
        "min_size": 10
       }
     ]
-  }
+  },
 {"filename": "body/21body.png",
   "needs": [
      { "type": "head",
@@ -118,7 +118,7 @@
        "min_size": 10
       }
     ]
-  }    
+  },
 {"filename": "body/22body.png",
   "needs": [
      { "type": "head",
@@ -126,7 +126,7 @@
        "min_size": 10
       }
     ]
-  }
+  },
 {"filename": "body/23body.png",
   "needs": [
      { "type": "head",
@@ -134,7 +134,7 @@
        "min_size": 10
       }
     ]
-  }
+  },
 {"filename": "body/25body.png",
   "needs": [
      { "type": "head",
@@ -142,7 +142,7 @@
        "min_size": 10
       }
     ]
-  }
+  },
 {"filename": "body/26body.png",
   "needs": [
      { "type": "head",
@@ -150,7 +150,7 @@
        "min_size": 10
       }
     ]
-  }
+  },
 {"filename": "body/28body.png",
   "needs": [
      { "type": "head",
@@ -158,7 +158,7 @@
        "min_size": 10
       }
     ]
-  }
+  },
 {"filename": "body/29body.png",
   "needs": [
      { "type": "head",
@@ -166,7 +166,7 @@
        "min_size": 10
       }
     ]
-  }
+  },
 {"filename": "body/30body.png",
   "needs": [
      { "type": "head",
@@ -174,7 +174,7 @@
        "min_size": 10
       }
     ]
-  }
+  },
 {"filename": "body/031.png",
   "needs": [
      { "type": "head",
@@ -182,7 +182,7 @@
        "min_size": 10
       }
     ]
-  }
+  },
 {"filename": "body/031-1.png",
   "needs": [
      { "type": "head",
@@ -190,7 +190,7 @@
        "min_size": 10
       }
     ]
-  }
+  },
 {"filename": "body/032.png",
   "needs": [
      { "type": "head",
@@ -198,7 +198,7 @@
        "min_size": 10
       }
     ]
-  }
+  },
 {"filename": "body/033.png",
   "needs": [
      { "type": "head",
@@ -206,7 +206,7 @@
        "min_size": 10
       }
     ]
-  }
+  },
 {"filename": "body/034.png",
   "needs": [
      { "type": "head",
@@ -214,7 +214,7 @@
        "min_size": 10
       }
     ]
-  }
+  },
 {"filename": "body/035.png",
   "needs": [
      { "type": "head",
