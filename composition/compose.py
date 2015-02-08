@@ -21,9 +21,9 @@ def get_metadata():
 # pinhole_a is the pinhold for the first image
 # pinhole_b is the pinhold for the second image
 # returns the coords to paste b to match pinholes
-def get_pinhole_match(paste, pinhole_a, pinhole_b):
+def get_pinhole_match(paste, pinhole_a, pinhole_b, imagea, imageb):
   x = paste[0] + pinhole_a[0] - pinhole_b[0]
-  y = paste[1] + pinhole_a[1] - pinhole_b[1]
+  y = paste[1] + (imagea.size[1] - pinhole_a[1]) - pinhole_b[1]
   return (x, y)
 
 
@@ -49,7 +49,9 @@ head_pinhole = head["pinhole"]
 
 
 master.paste(body_image,(500, 500))
-coords = get_pinhole_match((500, 500), body_pinhole, head_pinhole)
+coords = get_pinhole_match((500, 500),
+                            body_pinhole, head_pinhole,
+                            body_image, head_image)
 master.paste(head_image, coords, head_image)
 master.save("horror.png")
 
