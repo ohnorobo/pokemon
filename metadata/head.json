@@ -16,7 +16,7 @@
     "size": 15
   }, 
   { "filename": "head/6head.png",
-    "pinhole": [30,28],
+    "pinhole": [11,15],
     "size": 15
   }, 
   { "filename": "head/7head.png",
@@ -60,7 +60,7 @@
     "size": 15
   }, 
   { "filename": "head/18head.png",
-    "pinhole": [17,5],
+    "pinhole": [19,18],
     "size": 15
   }, 
   { "filename": "head/19head.png",
