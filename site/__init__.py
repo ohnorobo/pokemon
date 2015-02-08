@@ -8,7 +8,7 @@ import flask
 import random
 import compose
 
-app = flask.Flask(__name__, static_folder="/var/www/pokemon/html/static")
+app = flask.Flask(__name__, static_folder="/var/www/pokemon/site/static")
 
 
 names = [line.strip() for line in open("../pokemon_names.txt", "r")]
