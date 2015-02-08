@@ -232,7 +232,7 @@
     "size": 15
   }, 
   { "filename": "head/073.png",
-    "pinhole": [19.27],
+    "pinhole": [19, 27],
     "size": 15
   }, 
   { "filename": "head/074.png",
