@@ -9,7 +9,7 @@ Developed at [Hack Beanpot 2015](http://hackbeanpot.com/)
 
 Developed by:
 
-- Ahn Duc Bui
+- Anh Duc Bui
 - Anthony Chan
 - Ana Luiza Cunha
 - Cosi Leone
