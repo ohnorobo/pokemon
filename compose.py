@@ -90,22 +90,22 @@ def generate_image():
       size=(300, 300),
       color=(0,0,0,0))
 
-  body_pinhole = body["needs"][0]["pinhole"]
+  
   head_pinhole = head["pinhole"]
   tail_pinhole = tail["needs"][0]["pinhole"]
-
+ if len(body["needs"])>1:
+   body_pinhole = body["needs"][1]["pinhole"]
+   coords = get_pinhole_match((150,150),
+                              body_pinhole,tail_pinhole,
+                              body_image, tail_image)
+   master.paste(tail_image, coords, tail_image)
   master.paste(body_image,(150, 150))
+  body_pinhole = body["needs"][0]["pinhole"]
   coords = get_pinhole_match((150, 150),
                               body_pinhole, head_pinhole,
                               body_image, head_image)
   master.paste(head_image, coords, head_image)
 
-  if len(body["needs"])>1:
-    body_pinhole = body["needs"][1]["pinhole"]
-    coords = get_pinhole_match((150,150),
-                               body_pinhole,tail_pinhole,
-                               body_image, tail_image)
-    master.paste(tail_image, coords, tail_image)
   master=crop(master)
   master=embiggen(master)
   master.save("../site/static/imgs/horror.png") 
