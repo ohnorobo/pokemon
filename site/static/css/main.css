@@ -58,8 +58,8 @@ img {
 	background-color: rgb(229,51,55);
 	border: 3px solid black;
 	border-radius: .4em;
-	width: 25%;
 	box-shadow: .5em .5em 0 rgb(168, 184, 184);
+	width: 10em;
 }
 
 .pokename {
