@@ -22,7 +22,7 @@
        "min_size": 10
       }
     ]
-  }
+  },
   {"filename": "body/5body.png",
   "needs": [
      { "type": "head",
@@ -30,7 +30,7 @@
        "min_size": 10
       }
     ]
-  }  
+  },  
   {"filename": "body/6body.png",
   "needs": [
      { "type": "head",
@@ -38,7 +38,7 @@
        "min_size": 10
       }
     ]
-  }  
+  },  
 {"filename": "body/7body.png",
   "needs": [
      { "type": "head",
@@ -46,7 +46,7 @@
        "min_size": 10
       }
     ]
-  }    
+  },    
 {"filename": "body/8body.png",
   "needs": [
      { "type": "head",
@@ -54,7 +54,7 @@
        "min_size": 10
       }
     ]
-  }
+  },
 {"filename": "body/9body.png",
   "needs": [
      { "type": "head",
@@ -62,7 +62,7 @@
        "min_size": 10
       }
     ]
-  }    
+  },    
 {"filename": "body/10body.png",
   "needs": [
      { "type": "head",
@@ -70,7 +70,7 @@
        "min_size": 10
       }
     ]
-  }    
+  },    
 {"filename": "body/12body.png",
   "needs": [
      { "type": "head",
@@ -78,7 +78,7 @@
        "min_size": 10
       }
     ]
-  }    
+  },    
 {"filename": "body/13body.png",
   "needs": [
      { "type": "head",
@@ -86,7 +86,7 @@
        "min_size": 10
       }
     ]
-  }
+  },
 {"filename": "body/14body.png",
   "needs": [
      { "type": "head",
@@ -94,7 +94,7 @@
        "min_size": 10
       }
     ]
-  }
+  },
 {"filename": "body/15body.png",
   "needs": [
      { "type": "head",
@@ -102,7 +102,7 @@
        "min_size": 10
       }
     ]
-  }
+  },
 {"filename": "body/19body.png",
   "needs": [
      { "type": "head",
