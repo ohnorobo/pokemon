@@ -54,7 +54,7 @@ def generate_image():
                               body_pinhole, head_pinhole,
                               body_image, head_image)
   master.paste(head_image, coords, head_image)
-  master.save("horror.png")
+  master.save("./site/static/imgs/horror.png")
 
 
 
