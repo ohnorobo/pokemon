@@ -53,6 +53,11 @@ def crop(img):
 
     return img.crop(a+d)
 
+
+FACTOR = 3
+def embiggen(img):
+  return img.resize((FACTOR*img.size[0], FACTOR*img.size[1]), 0)
+
 def generate_image():
 
   bodies, heads = get_metadata()
@@ -81,6 +86,7 @@ def generate_image():
                               body_image, head_image)
   master.paste(head_image, coords, head_image)
   master=crop(master)
+  master=embiggen(master)
   master.save("../site/static/imgs/horror.png")
 
 
