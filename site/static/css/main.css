@@ -145,10 +145,10 @@ img {
 }
 
 #pokesprite {
-	margin-top: 10px;
+	margin-top: -50px;
 	margin-left: auto;
 	margin-right: auto;
-  margin-bottom: 70px;
+  	margin-bottom: 70px;
 	text-align: center;
 	-webkit-box-reflect: below -0px -webkit-linear-gradient(bottom, rgba(255,255,255,0.3) 0%, transparent 20%, transparent 100%);
 }
@@ -209,7 +209,7 @@ img {
 	float: right;
 	font-size: 1.25em;
 	text-shadow: 1px 1px 0 #a8b8b8;
-	width: 42%;
+	width: 45%;
 }
 
 .info-upper {
@@ -245,7 +245,7 @@ img {
 	margin: .5em auto 0 auto;
 	padding: 0 .8em 0 .8em;
 	text-align: center;
-	width: 20em;
+	width: 30em;
 }
 
 .description {
