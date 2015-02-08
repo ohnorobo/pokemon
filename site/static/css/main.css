@@ -18,12 +18,12 @@ body {
 }
 
 img { 
-   image-rendering: optimizeSpeed;             /* FUCK SMOOTHING, GIVE ME SPEED  */
-   image-rendering: -moz-crisp-edges;          /* Firefox                        */
-   image-rendering: -o-crisp-edges;            /* Opera                          */
-   image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
-   image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
-   -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+	image-rendering: optimizeSpeed;             /* FUCK SMOOTHING, GIVE ME SPEED  */
+	image-rendering: -moz-crisp-edges;          /* Firefox                        */
+	image-rendering: -o-crisp-edges;            /* Opera                          */
+	image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+	image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+	-ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
 }
 
 #banner {
@@ -37,14 +37,22 @@ img {
 	background: -ms-linear-gradient(top,  rgb(74,101,244) 0%,rgb(34,52,150) 100%);
 	background: linear-gradient(to bottom,  rgb(74,101,244) 0%,rgb(34,52,150) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a65f4', endColorstr='#223496',GradientType=0 );
-	height: 100px;
+	height: 80px;
 	border-bottom: 2px solid black;
+	position: fixed;
+	width: 100%;  
+	left: 0;  
+	top: 0;  
+	z-index: 100;  
+	border-top: 0;
+	vertical-align: text-top;
 }
 
 #banner h1 {
 	margin: 0;
 	font-size: 5.5em;
 	text-shadow: 3px 3px 0 #000;
+	margin-top: -.15em;
 }
 
 #left-arrow {
@@ -74,7 +82,7 @@ img {
 }
 
 #pokedex-wrapper {
-	margin-top: 1em;
+	margin-top: 6.5em;
 /*	background-color: rgb(199, 211, 196);*/
 	background-image: url(../imgs/pokedex.png);
 	border: 2px solid black;
@@ -127,7 +135,7 @@ img {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	-webkit-box-reflect: below -150px -webkit-linear-gradient(bottom, rgba(255,255,255,0.3) 0%, transparent 40%, transparent 100%);
+	-webkit-box-reflect: below -125px -webkit-linear-gradient(bottom, rgba(255,255,255,0.3) 0%, transparent 40%, transparent 100%);
 }
 
 #pokemon-info {
