@@ -80,16 +80,22 @@ FACTOR = 3
 def embiggen(img):
   return img.resize((FACTOR*img.size[0], FACTOR*img.size[1]), 0)
 
+def get_image_filename(ids):
+    print(("IDS",ids))
+    return "-".join(str(v) for v in ids) + ".png"
+
+
 def generate_image():
 
   bodies, heads, tails = get_metadata()
-  body = random.choice(bodies)
-  head = random.choice(heads)
-  tail = random.choice(tails)
 
-#  pprint(body)
-#  pprint(head)
-#  pprint(tail)
+  body_id = random.choice(range(len(bodies)))
+  head_id = random.choice(range(len(heads)))
+  tail_id = random.choice(range(len(tails)))
+
+  body = bodies[body_id]
+  head = heads[head_id]
+  tail = tails[tail_id]
 
   body_image = Image.open(file_loc+body["filename"])
   head_image = Image.open(file_loc+head["filename"])
@@ -108,17 +114,24 @@ def generate_image():
                                body_pinhole,tail_pinhole,
                                body_image, tail_image)
     master.paste(tail_image, coords, tail_image)
+    ids = [body_id, head_id, tail_id]
+
+  else: #no tail
+    ids = [body_id, head_id]
+
   body_pinhole = body["needs"][0]["pinhole"]
   master.paste(body_image,(150, 150),body_image)
   coords = get_pinhole_match((150, 150),
                               body_pinhole, head_pinhole,
                               body_image, head_image)
   master.paste(head_image, coords, head_image)
-  
+
   master = crop(master)
   master = embiggen(master)
   master = same_size(master)
-  master.save("../site/static/imgs/horror.png") 
+  master.save("../site/static/imgs/generated/"+get_image_filename(ids))
+
+  return ids
 
  # for i in body_pinhole["needs"]:
  #   body_pinhole = i["pinhole"]
