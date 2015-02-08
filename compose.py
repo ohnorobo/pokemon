@@ -69,10 +69,10 @@ def same_size(img):
 
   master = Image.new(
       mode='RGBA',
-      size=(300, 300),
+      size=(300, 280),
       color=(0,0,0,0))
 
-  master.paste(img, (150-w/2, 150-h/2), img)
+  master.paste(img, (150-w/2, 280-h-2), img)
   return master
 
 
