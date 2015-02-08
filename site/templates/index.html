@@ -6,11 +6,35 @@
 	<link rel="stylesheet" href="../static/css/normalize.css">
 	<link rel="stylesheet" href="../static/css/main.css">
 	<title>Missing No.</title>
+	<script type="text/javascript">
+		// Wait for the page to load first
+		window.onload = function() {
+			//Get a reference to the link on the page
+			// with an id of "arrow"
+			var a = document.getElementById("left-arrow");	
+			var b = document.getElementById("right-arrow");
+			var c = document.getElementById("banner");
+			//Set code to run when the link is clicked
+			// by assigning a function to "onclick"
+			a.onclick = function() {
+				location.reload(forceGet=true);
+				return false;
+			}
+			b.onclick = function() {
+				location.reload(forceGet=true);
+				return false;
+			}
+			c.onclick = function() {
+				location.reload(forceGet=true);
+				return false;
+			}
+		}
+	</script>
 </head>
 <body>
 	<img src="../static/imgs/veridian-forest.png" id="bg" alt="">
-	<a href="https://github.com/ohnorobo/pokemon"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork us on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
-	<div id="banner"><h1>Hack Beanpot's Pokédex!</h1></div>
+	<a href="https://github.com/ohnorobo/pokemon"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 101; width: 9%" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork us on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+	<div id="banner"><h1><a href="http://frankenpokemon.me">Hack Beanpot's Pokédex!</a></h1></div>
 	<div id="pokedex-bg">
 		<div id="pokedex-wrapper">
 			<div class="pokename-border">
@@ -49,6 +73,10 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div id="arrows">
+		<div id="left-arrow"><a href="http://frankenpokemon.me"><img src="../static/imgs/arrow.png" alt="previous"></a></div>
+		<div id="right-arrow"><a href="http://frankenpokemon.me"><img src="../static/imgs/arrow.png" alt="next"></a></div>
 	</div>
 	
 </body>
