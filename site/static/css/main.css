@@ -38,6 +38,19 @@ img {
 	text-shadow: 3px 3px 0 #000;
 }
 
+#pokedex-wrapper {
+	background-image: url(../imgs/pokedex.png);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 130px;
+	height: 650px;
+	width: 500px;
+}
+
 .pokename-border {
 	text-align: center;
 	margin: 1em auto 0 auto;
@@ -73,7 +86,7 @@ img {
 	display: inline-block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 27%;
+	width: 20em;
 }
 
 #type1 {
@@ -151,7 +164,7 @@ img {
 	margin: .5em auto 0 auto;
 	padding: 0 .8em 0 .8em;
 	text-align: center;
-	width: 25%;	
+	width: 20em;
 }
 
 .description {
