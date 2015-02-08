@@ -22,12 +22,11 @@ def randomize_name():
 def random_types():
     return random.sample(types, 2)
 
-type_choice = random_types()
 
 @app.route('/')
 def index():
     make_image()
-    return flask.render_template("index.html", pokename=randomize_name(), type1=type_choice[0], type2=type_choice[1])
+    return flask.render_template("index.html", pokename=randomize_name(), type1=random_types()[0], type2=random_types()[1])
 
 
 def make_image():
