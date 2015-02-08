@@ -20,8 +20,8 @@ def randomize_name():
 
 
 def random_types():
-    return random.sample(types, 2)
-
+    x = random.sample(types, 2)
+    return x
 
 @app.route('/')
 def index():
