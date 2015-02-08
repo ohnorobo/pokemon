@@ -64,8 +64,16 @@ def crop(img):
 
     return img.crop(a+d)
 
-def same_size():
-  pass
+def same_size(img):
+  w, h = img.size
+
+  master = Image.new(
+      mode='RGBA',
+      size=(300, 300),
+      color=(0,0,0,0))
+
+  master.paste(img, (150-w/2, 150-h/2), img)
+  return master
 
 
 FACTOR = 3
@@ -109,6 +117,7 @@ def generate_image():
   
   master = crop(master)
   master = embiggen(master)
+  master = same_size(master)
   master.save("../site/static/imgs/horror.png") 
 
  # for i in body_pinhole["needs"]:
