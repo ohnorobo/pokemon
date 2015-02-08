@@ -15,8 +15,8 @@ app = flask.Flask(__name__, static_folder="/var/www/pokemon/site/static")
 names = [line.strip() for line in open("../pokemon_names.txt", "r")]
 types = [line.strip() for line in open("../types.txt", "r")]
 
-length_units = ["m", "ft", "yards", "cm", "snts", "rod"]
-weight_units = ["lbs", "kg", "drams"]
+length_units = ["m", "ft", "yards", "cm", "smts", "rod"]
+weight_units = ["lbs", "kg", "drams", "stone", "mg"]
 
 
 def randomize_name():
