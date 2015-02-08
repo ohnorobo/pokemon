@@ -119,10 +119,6 @@
     "pinhole": [14,12],
     "size": 15
   }, 
-  { "filename": "head/035.png",
-    "pinhole": [26,19],
-    "size": 15
-  }, 
   { "filename": "head/036.png",
     "pinhole": [18, 16],
     "size": 15
