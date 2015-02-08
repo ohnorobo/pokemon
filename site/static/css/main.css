@@ -62,15 +62,17 @@ img {
 }
 
 #arrows {
-	display: inline-block;
+	position: fixed;
+	width: 100%;
 	min-width: 800px;
+	position: sticky;
+	top: 250px;
 }
 
 #left-arrow {
 	float: left;
-	position: absolute;
+	position: fixed;
 	left: 1em;
-	top: 250px;
 	width: 10em;
 }
 
@@ -84,8 +86,7 @@ img {
 
 #right-arrow {
 	float: right;
-	position: absolute;
-	top: 250px;
+	position: fixed;
 	right: 1em;
 	width: 10em;
 }
