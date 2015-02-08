@@ -4,6 +4,10 @@
       { "type": "head",
         "pinhole": [11, 20],
         "min_size": 20
+      },
+      {"type": "tail",
+       "pinhold": [27, 13],
+       "min_size": 20
       }
     ]
   },
@@ -12,6 +16,10 @@
       { "type": "head",
         "pinhole": [16, 20],
         "min_size": 10
+      },
+      {"type": "tail",
+       "pinhold": [41, 20],
+       "min_size": 20
       }
     ]
   },
@@ -20,6 +28,10 @@
      { "type": "head",
        "pinhole": [13,35],
        "min_size": 10
+      },
+      {"type": "tail",
+       "pinhold": [11, 23],
+       "min_size": 20
       }
     ]
   },
@@ -28,6 +40,10 @@
      { "type": "head",
        "pinhole": [19, 42],
        "min_size": 10
+      },
+      {"type": "tail",
+       "pinhold": [35, 20],
+       "min_size": 20
       }
     ]
   },  
@@ -36,6 +52,10 @@
      { "type": "head",
        "pinhole": [17, 50],
        "min_size": 10
+      },
+      {"type": "tail",
+       "pinhold": [40, 27],
+       "min_size": 20
       }
     ]
   },  
@@ -44,6 +64,10 @@
      { "type": "head",
        "pinhole": [13, 30],
        "min_size": 10
+      },
+       {"type": "tail",
+       "pinhold": [26, 11],
+       "min_size": 20
       }
     ]
   },    
@@ -52,6 +76,10 @@
      { "type": "head",
        "pinhole": [21, 35],
        "min_size": 10
+      },
+       {"type": "tail",
+       "pinhold": [39, 14],
+       "min_size": 20
       }
     ]
   },
@@ -60,6 +88,10 @@
      { "type": "head",
        "pinhole": [24, 54],
        "min_size": 10
+      },
+      {"type": "tail",
+       "pinhold": [55, 25],
+       "min_size": 20
       }
     ]
   },    
@@ -68,6 +100,10 @@
      { "type": "head",
        "pinhole": [8, 21],
        "min_size": 10
+      },
+       {"type": "tail",
+       "pinhold": [17, 8],
+       "min_size": 20
       }
     ]
   },    
@@ -76,7 +112,8 @@
      { "type": "head",
        "pinhole": [13, 22],
        "min_size": 10
-      }
+      },
+     #thisguyneedswork
     ]
   },    
 {"filename": "body/13body.png",
@@ -84,6 +121,10 @@
      { "type": "head",
        "pinhole": [8, 23],
        "min_size": 10
+      },
+       {"type": "tail",
+       "pinhold": [14, 7],
+       "min_size": 20
       }
     ]
   },
@@ -92,6 +133,10 @@
      { "type": "head",
        "pinhole": [10, 31],
        "min_size": 10
+      },
+       {"type": "tail",
+       "pinhold": [18, 11],
+       "min_size": 20
       }
     ]
   },
@@ -100,6 +145,10 @@
      { "type": "head",
        "pinhole": [24, 30],
        "min_size": 10
+      },
+       {"type": "tail",
+       "pinhold": [17, 10],
+       "min_size": 20
       }
     ]
   },
@@ -108,6 +157,10 @@
      { "type": "head",
        "pinhole": [48, 38],
        "min_size": 10
+      },
+       {"type": "tail",
+       "pinhold": [58, 33],
+       "min_size": 20
       }
     ]
   },
@@ -116,7 +169,8 @@
      { "type": "head",
        "pinhole": [20, 24],
        "min_size": 10
-      }
+      },
+      
     ]
   },
 {"filename": "body/22body.png",
