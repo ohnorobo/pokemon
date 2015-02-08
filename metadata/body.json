@@ -23,4 +23,92 @@
       }
     ]
   }
+  {"filename": "body/5body.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [19, 42],
+       "min_size": 10
+      }
+    ]
+  }  
+  {"filename": "body/6body.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [17, 50],
+       "min_size": 10
+      }
+    ]
+  }  
+{"filename": "body/7body.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [13, 30],
+       "min_size": 10
+      }
+    ]
+  }    
+{"filename": "body/8body.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [21, 35],
+       "min_size": 10
+      }
+    ]
+  }
+{"filename": "body/9body.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [24, 54],
+       "min_size": 10
+      }
+    ]
+  }    
+{"filename": "body/10body.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [8, 21],
+       "min_size": 10
+      }
+    ]
+  }    
+{"filename": "body/12body.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [13, 22],
+       "min_size": 10
+      }
+    ]
+  }    
+{"filename": "body/13body.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [8, 23],
+       "min_size": 10
+      }
+    ]
+  }
+{"filename": "body/14body.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [10, 31],
+       "min_size": 10
+      }
+    ]
+  }
+{"filename": "body/15body.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [24, 30],
+       "min_size": 10
+      }
+    ]
+  }
+{"filename": "body/19body.png",
+  "needs": [
+     { "type": "head",
+       "pinhole": [48, 38],
+       "min_size": 10
+      }
+    ]
+  }
 ]
