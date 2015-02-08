@@ -340,7 +340,7 @@
        "min_size": 10
       },
       {"type": "tail",
-       "pinhole": [39, 24],
+       "pinhole": [39, 19],
        "min_size": 20
       }
     ]
