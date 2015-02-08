@@ -206,6 +206,10 @@
      { "type": "head",
        "pinhole": [14, 30],
        "min_size": 10
+      },
+       {"type": "tail",
+       "pinhole": [50, 13],
+       "min_size": 20
       }
     ]
   },
@@ -214,6 +218,10 @@
      { "type": "head",
        "pinhole": [19, 52],
        "min_size": 10
+      },
+      {"type": "tail",
+       "pinhole": [36, 20],
+       "min_size": 20
       }
     ]
   },
@@ -222,6 +230,10 @@
      { "type": "head",
        "pinhole": [23, 41],
        "min_size": 10
+      },
+      {"type": "tail",
+       "pinhole": [37, 13],
+       "min_size": 20
       }
     ]
   },
@@ -230,6 +242,10 @@
      { "type": "head",
        "pinhole": [24, 27],
        "min_size": 10
+      },
+      {"type": "tail",
+       "pinhole": [40, 14],
+       "min_size": 20
       }
     ]
   },
@@ -238,6 +254,10 @@
      { "type": "head",
        "pinhole": [13, 23],
        "min_size": 10
+      },
+      {"type": "tail",
+       "pinhole": [22, 12],
+       "min_size": 20
       }
     ]
   },
@@ -278,6 +298,10 @@
      { "type": "head",
        "pinhole": [27, 20],
        "min_size": 10
+      },
+      {"type": "tail",
+       "pinhole": [49, 14],
+       "min_size": 20
       }
     ]
   },
@@ -286,6 +310,10 @@
      { "type": "head",
        "pinhole": [43, 37],
        "min_size": 10
+      },
+      {"type": "tail",
+       "pinhole": [74, 15],
+       "min_size": 20
       }
     ]
   },
@@ -310,6 +338,10 @@
      { "type": "head",
        "pinhole": [21, 38],
        "min_size": 10
+      },
+      {"type": "tail",
+       "pinhole": [39, 24],
+       "min_size": 20
       }
     ]
   },       
@@ -318,6 +350,10 @@
      { "type": "head",
        "pinhole": [28, 45],
        "min_size": 10
+      },
+      {"type": "tail",
+       "pinhole": [38, 22],
+       "min_size": 20
       }
     ]
   }, 
@@ -334,6 +370,10 @@
      { "type": "head",
        "pinhole": [15, 37],
        "min_size": 10
+      },
+      {"type": "tail",
+       "pinhole": [26, 18],
+       "min_size": 20
       }
     ]
   },    
@@ -374,6 +414,10 @@
      { "type": "head",
        "pinhole": [16, 26],
        "min_size": 10
+      },
+      {"type": "tail",
+       "pinhole": [59, 20],
+       "min_size": 20
       }
     ]
   },            
@@ -398,6 +442,10 @@
      { "type": "head",
        "pinhole": [20, 25],
        "min_size": 10
+      },
+      {"type": "tail",
+       "pinhole": [41, 23],
+       "min_size": 20
       }
     ]
   },            
@@ -486,6 +534,10 @@
      { "type": "head",
        "pinhole": [22, 55],
        "min_size": 10
+      },
+      {"type": "tail",
+       "pinhole": [55, 21],
+       "min_size": 20
       }
     ]
   },            
