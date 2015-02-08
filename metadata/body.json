@@ -112,7 +112,7 @@
      { "type": "head",
        "pinhole": [13, 22],
        "min_size": 10
-      },
+      }
      
     ]
   },    
