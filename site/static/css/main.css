@@ -39,7 +39,10 @@ img {
 }
 
 #pokedex-wrapper {
+	margin-top: 1em;
+/*	background-color: rgb(199, 211, 196);*/
 	background-image: url(../imgs/pokedex.png);
+	border: 2px solid black;
 	background-position: top;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -47,9 +50,9 @@ img {
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 130px;
-	height: 750px;
+	height: 450px;
 	width: 500px;
-	border-radius: 30px;
+	border-radius: 5px;
 }
 
 .pokename-border {
