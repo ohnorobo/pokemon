@@ -124,15 +124,15 @@
     "size": 15
   }, 
   { "filename": "head/036.png",
-    "pinhole": [18,16],
+    "pinhole": [18, 16],
     "size": 15
   }, 
   { "filename": "head/038.png",
-    "pinhole": [14,13],
+    "pinhole": [14, 13],
     "size": 15
   }, 
   { "filename": "head/039.png",
-    "pinhole": [24,22],
+    "pinhole": [29, 8],
     "size": 15
   }, 
   { "filename": "head/045.png",
@@ -156,11 +156,11 @@
     "size": 15
   }, 
   { "filename": "head/056.png",
-    "pinhole": [28,28],
+    "pinhole": [22, 12],
     "size": 15
   }, 
   { "filename": "head/057.png",
-    "pinhole": [18,17],
+    "pinhole": [18, 17],
     "size": 15
   }, 
   { "filename": "head/058.png",
@@ -168,11 +168,11 @@
     "size": 15
   }, 
   { "filename": "head/059.png",
-    "pinhole": [26,12],
+    "pinhole": [26, 12],
     "size": 15
   }, 
   { "filename": "head/060.png",
-    "pinhole": [24,18],
+    "pinhole": [24, 18],
     "size": 15
   }, 
   { "filename": "head/061.png",
@@ -180,11 +180,11 @@
     "size": 15
   }, 
   { "filename": "head/062.png",
-    "pinhole": [13,11],
+    "pinhole": [13, 11],
     "size": 15
   }, 
   { "filename": "head/063.png",
-    "pinhole": [14,15],
+    "pinhole": [14, 15],
     "size": 15
   }, 
   { "filename": "head/064.png",
@@ -192,7 +192,7 @@
     "size": 15
   }, 
   { "filename": "head/065.png",
-    "pinhole": [21,22],
+    "pinhole": [21, 22],
     "size": 15
   }, 
   { "filename": "head/066.png",
@@ -200,19 +200,19 @@
     "size": 15
   }, 
   { "filename": "head/068.png",
-    "pinhole": [18,11],
+    "pinhole": [18, 11],
     "size": 15
   }, 
   { "filename": "head/069.png",
-    "pinhole": [10,10],
+    "pinhole": [10, 10],
     "size": 15
   }, 
   { "filename": "head/070.png",
-    "pinhole": [17,17],
+    "pinhole": [17, 17],
     "size": 15
   }, 
   { "filename": "head/071.png",
-    "pinhole": [13,16],
+    "pinhole": [13, 16],
     "size": 15
   }, 
   { "filename": "head/072.png",
@@ -224,15 +224,15 @@
     "size": 15
   }, 
   { "filename": "head/074.png",
-    "pinhole": [19,19],
+    "pinhole": [19, 19],
     "size": 15
   }, 
   { "filename": "head/075.png",
-    "pinhole": [19,29],
+    "pinhole": [19, 29],
     "size": 15
   }, 
   { "filename": "head/076.png",
-    "pinhole": [25,23],
+    "pinhole": [25, 23],
     "size": 15
   }, 
   { "filename": "head/077.png",
@@ -240,19 +240,19 @@
     "size": 15
   }, 
   { "filename": "head/078.png",
-    "pinhole": [18,15],
+    "pinhole": [18, 15],
     "size": 15
   }, 
   { "filename": "head/079.png",
-    "pinhole": [15,21],
+    "pinhole": [15, 21],
     "size": 15
   }, 
   { "filename": "head/080.png",
-    "pinhole": [19,16],
+    "pinhole": [19, 16],
     "size": 15
   }, 
   { "filename": "head/081.png",
-    "pinhole": [15,19],
+    "pinhole": [15, 19],
     "size": 15
   }, 
   { "filename": "head/082.png",
@@ -260,7 +260,7 @@
     "size": 15
   }, 
   { "filename": "head/083.png",
-    "pinhole": [11,12],
+    "pinhole": [11, 12],
     "size": 15
   }
 ]
