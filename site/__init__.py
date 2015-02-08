@@ -1,5 +1,12 @@
+import os
+import sys
+#incantation to fix python imports
+parentdir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, parentdir)
+
 import flask
 import random
+import compose
 
 app = flask.Flask(__name__, static_folder="/var/www/pokemon/html/static")
 
@@ -17,7 +24,13 @@ def random_pokemon():
 
 @app.route('/')
 def index():
-    return flask.render_template("index.html", pokename=randomize_name(), pokemon=random_pokemon())
+    make_image()
+    return flask.render_template("index.html", pokename=randomize_name())
+
+
+def make_image():
+    compose.generate_image()
+
 
 if __name__ == '__main__':
     host = "127.0.0.1"

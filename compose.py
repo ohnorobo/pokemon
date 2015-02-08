@@ -5,13 +5,13 @@ import random
 from PIL import Image
 from pprint import pprint
 
-file_loc = "./images/croppedPokeParts/"
+file_loc = "../images/croppedPokeParts/"
 
 def get_metadata():
-  f = open("./metadata/body.json", 'r')
+  f = open("../metadata/body.json", 'r')
   bodies = json.loads(f.read())
 
-  f = open("./metadata/head.json", 'r')
+  f = open("../metadata/head.json", 'r')
   heads = json.loads(f.read())
 
   return bodies, heads
@@ -54,7 +54,7 @@ def generate_image():
                               body_pinhole, head_pinhole,
                               body_image, head_image)
   master.paste(head_image, coords, head_image)
-  master.save("horror.png")
+  master.save("../site/static/imgs/horror.png")
 
 
 
