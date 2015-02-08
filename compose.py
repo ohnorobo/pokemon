@@ -94,21 +94,20 @@ def generate_image():
   head_pinhole = head["pinhole"]
   tail_pinhole = tail["needs"][0]["pinhole"]
 
-  master.paste(body_image,(50, 50))
-  coords = get_pinhole_match((50, 50),
+  master.paste(body_image,(150, 150))
+  coords = get_pinhole_match((150, 150),
                               body_pinhole, head_pinhole,
                               body_image, head_image)
   master.paste(head_image, coords, head_image)
 
-  master=crop(master)
-  master=embiggen(master)
-
   if len(body["needs"])>1:
     body_pinhole = body["needs"][1]["pinhole"]
-    coords = get_pinhole_match((500,500),
+    coords = get_pinhole_match((150,150),
                                body_pinhole,tail_pinhole,
                                body_image, tail_image)
     master.paste(tail_image, coords, tail_image)
+  master=crop(master)
+  master=embiggen(master)
   master.save("../site/static/imgs/horror.png") 
   
  # for i in body_pinhole["needs"]:
