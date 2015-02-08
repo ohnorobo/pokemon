@@ -125,6 +125,7 @@ img {
 }
 
 .pokename-border {
+	z-index: 1;
 	text-align: center;
 	margin: 1em auto 0 auto;
 	padding: 0 .8em 0 .8em;
