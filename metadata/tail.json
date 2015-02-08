@@ -1,5 +1,5 @@
 [
- {"filename": "tail/4tail.png",
+ {"filename": "Tails/4tail.png",
   "needs": [
       { "type": "tail",
         "pinhole": [11, 15],
@@ -7,7 +7,7 @@
       }
     ]
   },
- {"filename": "tail/5tail.png",
+ {"filename": "Tails/5tail.png",
   "needs": [
       { "type": "tail",
         "pinhole": [20, 10],
@@ -15,7 +15,7 @@
       }
     ]
   },
- {"filename": "tail/6tail.png",
+ {"filename": "Tails/6tail.png",
   "needs": [
      { "type": "tail",
        "pinhole": [13, 5],
@@ -23,7 +23,7 @@
       }
     ]
   },
-{"filename": "tail/7tail.png",
+{"filename": "Tails/7tail.png",
   "needs": [
      { "type": "tail",
        "pinhole": [1, 3],
@@ -31,7 +31,7 @@
       }
     ]
   },
-{"filename": "tail/8tail.png",
+{"filename": "Tails/8tail.png",
   "needs": [
      { "type": "tail",
        "pinhole": [4, 5],
@@ -39,7 +39,7 @@
       }
     ]
   },    
-{"filename": "tail/9tail.png",
+{"filename": "Tails/9tail.png",
   "needs": [
      { "type": "tail",
        "pinhole": [1, 4],
@@ -47,7 +47,7 @@
       }
     ]
   },    
-{"filename": "tail/10tail.png",
+{"filename": "Tails/10tail.png",
   "needs": [
      { "type": "tail",
        "pinhole": [4, 4],
@@ -55,7 +55,7 @@
       }
     ]
   },    
-{"filename": "tail/13tail.png",
+{"filename": "Tails/13tail.png",
   "needs": [
      { "type": "tail",
        "pinhole": [3, 4],
@@ -63,7 +63,7 @@
       }
     ]
   },    
-{"filename": "tail/23tail.png",
+{"filename": "Tails/23tail.png",
   "needs": [
      { "type": "tail",
        "pinhole": [4, 6],
@@ -71,7 +71,7 @@
       }
     ]
   },    
-{"filename": "tail/25tail.png",
+{"filename": "Tails/25tail.png",
   "needs": [
      { "type": "tail",
        "pinhole": [25, 9],
@@ -79,7 +79,7 @@
       }
     ]
   },    
-{"filename": "tail/072.png",
+{"filename": "Tails/072.png",
   "needs": [
      { "type": "tail",
        "pinhole": [5, 6],
