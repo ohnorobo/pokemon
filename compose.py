@@ -1,23 +1,22 @@
-#!/usr/local/bin/python3
 
 import json
 import random
 from PIL import Image
 from pprint import pprint
 
-file_loc = "../images/croppedPokeParts/"
+file_loc = "images/croppedPokeParts/"
 
 def get_metadatalist():
   pass
 
 def get_metadata():
-  f = open("../metadata/body.json", 'r')
+  f = open("metadata/body.json", 'r')
   bodies = json.loads(f.read())
 
-  f = open("../metadata/head.json", 'r')
+  f = open("metadata/head.json", 'r')
   heads = json.loads(f.read())
 
-  f = open("../metadata/tail.json", 'r')
+  f = open("metadata/tail.json", 'r')
   tails = json.loads(f.read())
 
   return bodies, heads, tails
@@ -38,7 +37,7 @@ def paste_in():
 
 def generate_image():
 
-  bodies, heads = get_metadata()
+  bodies, heads, tails = get_metadata()
   body = random.choice(bodies)
   head = random.choice(heads)
   tail = random.choice(tails)
@@ -70,8 +69,9 @@ def generate_image():
                              body_pinhole,tail_pinhole,
                              body_image, tail_image)
   master.paste(tail_image, coords, tail_image)
+  master.save("horror.png")
   
  # for i in body_pinhole["needs"]:
  #   body_pinhole = i["pinhole"]
-    
-  master.save("../site/static/imgs/horror.png")
+ #FSDFSDFKLSDF;JASLKDGJ;ASDLKGJ; master.save("../site/static/imgs/horror.png")
+generate_image()
