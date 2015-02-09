@@ -41,7 +41,7 @@ class Markov(object):
                                self.cache[key] = [w4]
                                
        def generate_markov_text(self, size=25):
-               print "generating"
+               # print "generating"
                seed = random.randint(0, self.word_size-4)
                seed_word, next_word, third_word = self.words[seed], self.words[seed+1], self.words[seed+2]
                w1, w2, w3 = seed_word, next_word, third_word
@@ -67,7 +67,7 @@ class Markov(object):
 def get_text():
     markov = Markov(open("../markov/descriptions.txt"))
     text = markov.generate_markov_text(size=50)
-    print text
+    # print text
     
     return text
 

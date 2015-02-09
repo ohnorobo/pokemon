@@ -81,7 +81,7 @@ def embiggen(img):
   return img.resize((FACTOR*img.size[0], FACTOR*img.size[1]), 0)
 
 def get_image_filename(ids):
-    print(("IDS",ids))
+    # print(("IDS",ids))
     return "-".join(str(v) for v in ids) + ".png"
 
 
