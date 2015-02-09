@@ -7,6 +7,13 @@
 	<link rel="stylesheet" href="../static/css/main.css">
 	<title>Missing No.</title>
 	<script type="text/javascript">
+
+    //commenting this out since having static urls 
+    //causes the reload to not be a new pokemon
+    //of there's a way to reload but with the prev url
+    //that would be better
+
+    /*
 		// Wait for the page to load first
 		window.onload = function() {
 			//Get a reference to the link on the page
@@ -29,6 +36,7 @@
 				return false;
 			}
 		}
+    */
 
     if ("{{url}}" != "") {
       var url = window.location + "{{url}}"
