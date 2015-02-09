@@ -15,10 +15,10 @@ app = flask.Flask(__name__, static_folder="/var/www/pokemon/site/static")
 names = [line.strip() for line in open("../pokemon_names.txt", "r")]
 types = [line.strip() for line in open("../types.txt", "r")]
 
-length_units = ["m", "ft", "yards", "cm", "smts", "rod"]
-weight_units = ["lbs", "kg", "drams", "stone", "mg"]
+length_units = ["m", "ft", "yds", "cm", "smts", "rod"]
+weight_units = ["lbs", "kg", "drams", "stone", "mg", "tons"]
 
-
+recent_combos = []
 
 def random_text(name):
     text = markov.get_text()
