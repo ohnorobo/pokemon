@@ -1,2 +1,4 @@
 Thumbs.db
 .DS_Store
+site/static/imgs/generated/*
+*.pyc

@@ -38,8 +38,10 @@ def weight():
   return str(round(random.uniform(.01, 100), 1)) + random.choice(weight_units)
 
 def get_image_filename(ids):
-    print(("IDS",ids))
     return "-".join(str(v) for v in ids) + ".png"
+
+def get_url(ids):
+    return "-".join(str(v) for v in ids)
 
 def make_image():
     return compose.generate_image()
@@ -61,6 +63,7 @@ def id_index(ids):
                type2=type_choice[1],
                height=height(),
                weight=weight(),
+               url = "",
                description=random_text(name).decode('utf-8'))
 
     else:
@@ -71,6 +74,7 @@ def id_index(ids):
                type2=type_choice[1],
                height=height(),
                weight=weight(),
+               url = "",
                description=random_text(name).decode('utf-8'))
 
 
@@ -87,6 +91,7 @@ def index():
              type2=type_choice[1],
              height=height(),
              weight=weight(),
+             url=get_url(ids),
              description=random_text(name).decode('utf-8'))
 
 
