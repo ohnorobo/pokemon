@@ -85,10 +85,11 @@ def get_image_filename(ids):
     return "-".join(str(v) for v in ids) + ".png"
 
 
-def generate_image():
+def generate_image(seed=None):
 
   bodies, heads, tails = get_metadata()
 
+  random.seed(seed)
   body_id = random.choice(range(len(bodies)))
   head_id = random.choice(range(len(heads)))
   tail_id = random.choice(range(len(tails)))
@@ -117,7 +118,7 @@ def generate_image():
     ids = [body_id, head_id, tail_id]
 
   else: #no tail
-    ids = [body_id, head_id]
+    ids = [body_id, head_id, 'X']
 
   body_pinhole = body["needs"][0]["pinhole"]
   master.paste(body_image,(150, 150),body_image)
@@ -131,7 +132,7 @@ def generate_image():
   master = same_size(master)
   master.save("../site/static/imgs/generated/"+get_image_filename(ids))
 
-  return ids
+  return ids + [seed]
 
  # for i in body_pinhole["needs"]:
  #   body_pinhole = i["pinhole"]

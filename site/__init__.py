@@ -1,16 +1,25 @@
 import os
 import sys
+import time
+
+STATIC_DIR = "/var/www/pokemon/site/static"
+
 #incantation to fix python imports
-parentdir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+thisdir = os.path.dirname(os.path.abspath(__file__))
+parentdir = os.path.dirname(thisdir)
 sys.path.insert(0, parentdir)
 
 import flask
 import random
 import compose, markov
 
-#app = flask.Flask(__name__, static_folder="/Users/slaplante/projects/pokemon/site/static")
-app = flask.Flask(__name__, static_folder="/var/www/pokemon/site/static")
+# Use the static dir in the source if not a real server installation
+if os.path.exists(STATIC_DIR) and os.path.isdir(STATIC_DIR):
+  static_dir = STATIC_DIR
+else:
+  static_dir = os.path.join(thisdir, 'static')
 
+app = flask.Flask(__name__, static_folder=static_dir)
 
 names = [line.strip() for line in open("../pokemon_names.txt", "r")]
 types = [line.strip() for line in open("../types.txt", "r")]
@@ -20,15 +29,17 @@ weight_units = ["lbs", "kg", "drams", "stone", "mg", "tons"]
 
 recent_combos = []
 
-def random_text(name):
-    text = markov.get_text()
+def random_text(name, seed=None):
+    text = markov.get_text(seed)
     text = text.replace("<NAME>", name)
     return text
 
-def randomize_name():
+def randomize_name(seed=None):
+    random.seed(seed)
     return random.choice(names)
 
-def random_types():
+def random_types(seed=None):
+    random.seed(seed)
     return random.sample(types, 2)
 
 def height():
@@ -38,22 +49,26 @@ def weight():
   return str(round(random.uniform(.01, 100), 1)) + random.choice(weight_units)
 
 def get_image_filename(ids):
-    return "-".join(str(v) for v in ids) + ".png"
+    return "-".join(map(str,ids[:3])) + ".png"
 
 def get_url(ids):
-    return "-".join(str(v) for v in ids)
+    return "-".join(map(str, ids))
 
-def make_image():
-    return compose.generate_image()
-
+def make_image(seed=None):
+    return compose.generate_image(seed)
 
 @app.route('/<ids>')
 def id_index(ids):
     ids = ids.split('-')
-    filename = get_image_filename(ids)
-    name=randomize_name()
-    type_choice = random_types()
+    try:
+      seed = ids[3]
+    except:
+      seed = int(time.time()*1000)
 
+    filename = get_image_filename(ids)
+    name=randomize_name(seed)
+    type_choice = random_types(seed)
+    description = random_text(name, seed)
 
     if not os.path.isfile("../site/static/imgs/generated/"+filename):
       return flask.render_template("index.html",
@@ -64,7 +79,7 @@ def id_index(ids):
                height=height(),
                weight=weight(),
                url = "",
-               description=random_text(name).decode('utf-8'))
+               description=description.decode('utf-8'))
 
     else:
       return flask.render_template("index.html",
@@ -75,15 +90,18 @@ def id_index(ids):
                height=height(),
                weight=weight(),
                url = "",
-               description=random_text(name).decode('utf-8'))
+               description=description.decode('utf-8'))
 
 
 @app.route('/')
 def index():
-    ## TODO add url changing
-    ids = make_image()
-    name=randomize_name()
-    type_choice = random_types()
+    seed = int(time.time()*1000)
+
+    ids = make_image(seed)
+    name=randomize_name(seed)
+    type_choice = random_types(seed)
+    description = random_text(name, seed)
+
     return flask.render_template("index.html",
              pokename=name,
              image=get_image_filename(ids),
@@ -92,11 +110,11 @@ def index():
              height=height(),
              weight=weight(),
              url=get_url(ids),
-             description=random_text(name).decode('utf-8'))
+             description=description.decode('utf-8'))
 
 
 if __name__ == '__main__':
     host = "127.0.0.1"
     port = 8081
-    # app.debug = True
+    #app.debug = True
     app.run(host, port)

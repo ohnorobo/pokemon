@@ -10,8 +10,11 @@ class Markov(object):
                self.open_file = open_file
                self.words = self.file_to_words()
                self.word_size = len(self.words)
+               self.seed()
                self.database()
-               
+
+       def seed(self, seed=None):
+           self._seed = seed or "gotta catch em' all!"
        
        def file_to_words(self):
                self.open_file.seek(0)
@@ -42,6 +45,7 @@ class Markov(object):
                                
        def generate_markov_text(self, size=25):
                # print "generating"
+               random.seed(self._seed)
                seed = random.randint(0, self.word_size-4)
                seed_word, next_word, third_word = self.words[seed], self.words[seed+1], self.words[seed+2]
                w1, w2, w3 = seed_word, next_word, third_word
@@ -64,8 +68,9 @@ class Markov(object):
 
                return ' '.join(gen_words)
     
-def get_text():
+def get_text(seed=None):
     markov = Markov(open("../markov/descriptions.txt"))
+    markov.seed(seed)
     text = markov.generate_markov_text(size=50)
     # print text
     
