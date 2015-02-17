@@ -17,15 +17,6 @@ body {
 	min-height: 100%;
 }
 
-img { 
-	image-rendering: optimizeSpeed;             /* FUCK SMOOTHING, GIVE ME SPEED  */
-	image-rendering: -moz-crisp-edges;          /* Firefox                        */
-	image-rendering: -o-crisp-edges;            /* Opera                          */
-	image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
-	image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
-	-ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
-}
-
 #banner {
 	text-align: center;
 	color: white;
@@ -109,12 +100,14 @@ img {
 	margin-right: auto;
 	margin-bottom: 100px;
 	padding-top: 10px;
+  padding-bottom: 180px;
 	height: 650px;
 	width: 650px;
 	border-radius: 5px;
 }
 
 #dice {
+  margin: -1em 0 -2em 0;
 }
 
 #pokedex-bg {
@@ -156,6 +149,12 @@ img {
   	margin-bottom: 70px;
 	text-align: center;
 	-webkit-box-reflect: below -0px -webkit-linear-gradient(bottom, rgba(255,255,255,0.3) 0%, transparent 20%, transparent 100%);
+  image-rendering: optimizeSpeed;             /* FUCK SMOOTHING, GIVE ME SPEED  */
+	image-rendering: -moz-crisp-edges;          /* Firefox                        */
+	image-rendering: -o-crisp-edges;            /* Opera                          */
+	image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+	image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+	-ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
 }
 
 #pokemon-info {
