@@ -3,3 +3,4 @@ Thumbs.db
 site/static/imgs/generated/*
 *.pyc
 .idea
+poke-env/*
