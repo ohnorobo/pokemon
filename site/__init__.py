@@ -2,7 +2,7 @@ import os
 import sys
 import time
 
-STATIC_DIR = "/var/www/pokemon/site/static"
+# STATIC_DIR = "/var/www/pokemon/site/static"
 
 #incantation to fix python imports
 thisdir = os.path.dirname(os.path.abspath(__file__))
@@ -13,12 +13,7 @@ import flask
 import random
 import compose, markov
 
-# Use the static dir in the source if not a real server installation
-if os.path.exists(STATIC_DIR) and os.path.isdir(STATIC_DIR):
-  static_dir = STATIC_DIR
-else:
-  static_dir = os.path.join(thisdir, 'static')
-
+static_dir = os.path.join(thisdir, 'static')
 app = flask.Flask(__name__, static_folder=static_dir)
 
 names = [line.strip() for line in open("../pokemon_names.txt", "r")]

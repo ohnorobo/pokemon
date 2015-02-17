@@ -96,6 +96,7 @@ img {
 }
 
 #pokedex-wrapper {
+  text-align: center;
 	margin-top: 6.5em;
 /*	background-color: rgb(199, 211, 196);*/
 	background-image: url(../imgs/pokedex.png);
