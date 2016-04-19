@@ -69,7 +69,7 @@ class Markov(object):
                return ' '.join(gen_words)
     
 def get_text(seed=None):
-    markov = Markov(open("../markov/descriptions.txt"))
+    markov = Markov(open("markov/descriptions.txt"))
     markov.seed(seed)
     text = markov.generate_markov_text(size=50)
     # print text

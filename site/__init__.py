@@ -16,8 +16,8 @@ import compose, markov
 static_dir = os.path.join(thisdir, 'static')
 app = flask.Flask(__name__, static_folder=static_dir)
 
-names = [line.strip() for line in open("../pokemon_names.txt", "r")]
-types = [line.strip() for line in open("../types.txt", "r")]
+names = [line.strip() for line in open("pokemon_names.txt", "r")]
+types = [line.strip() for line in open("types.txt", "r")]
 
 length_units = ["m", "ft", "yds", "cm", "smts", "rod"]
 weight_units = ["lbs", "kg", "drams", "stone", "mg", "tons"]
@@ -65,7 +65,7 @@ def id_index(ids):
     type_choice = random_types(seed)
     description = random_text(name, seed)
 
-    if not os.path.isfile("../site/static/imgs/generated/"+filename):
+    if not os.path.isfile("site/static/imgs/generated/"+filename):
       return flask.render_template("index.html",
                pokename=name,
                image="missingno.png",

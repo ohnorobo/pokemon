@@ -5,19 +5,19 @@ import random
 from PIL import Image
 from pprint import pprint
 
-file_loc = "../images/croppedPokeParts/"
+file_loc = "images/croppedPokeParts/"
 
 def get_metadatalist():
   pass
 
 def get_metadata():
-  f = open("../metadata/body.json", 'r')
+  f = open("metadata/body.json", 'r')
   bodies = json.loads(f.read())
 
-  f = open("../metadata/head.json", 'r')
+  f = open("metadata/head.json", 'r')
   heads = json.loads(f.read())
 
-  f = open("../metadata/tail.json", 'r')
+  f = open("metadata/tail.json", 'r')
   tails = json.loads(f.read())
 
   return bodies, heads, tails
@@ -130,7 +130,7 @@ def generate_image(seed=None):
   master = crop(master)
   master = embiggen(master)
   master = same_size(master)
-  master.save("../site/static/imgs/generated/"+get_image_filename(ids))
+  master.save("site/static/imgs/generated/"+get_image_filename(ids))
 
   return ids + [seed]
 
