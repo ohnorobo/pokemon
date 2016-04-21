@@ -1,4 +1,4 @@
-# [FrankenPokemon](http://frankenpokemon.me/)
+# [FrankenPokemon](https://frankenpokemon.herokuapp.com)
 
 Use pokemon sprites to generate new and horrifying pokemon
 
