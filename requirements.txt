@@ -1,2 +1,2 @@
-Flask==1.0.0
+Flask==2.3.2
 Pillow==6.2.0
