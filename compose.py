@@ -72,7 +72,7 @@ def same_size(img):
       size=(300, 280),
       color=(0,0,0,0))
 
-  master.paste(img, (150-w/2, 280-h-2), img)
+  master.paste(img, (int(150-w/2), int(280-h-2)), img)
   return master
 
 

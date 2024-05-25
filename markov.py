@@ -50,7 +50,7 @@ class Markov(object):
                seed_word, next_word, third_word = self.words[seed], self.words[seed+1], self.words[seed+2]
                w1, w2, w3 = seed_word, next_word, third_word
                gen_words = []
-               for i in xrange(size):
+               for i in range(size):
                        gen_words.append(w1)
                        w1, w2, w3 = w2, w3, random.choice(self.cache[(w1, w2, w3)])
                gen_words.append(w3)

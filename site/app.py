@@ -74,7 +74,7 @@ def id_index(ids):
                height=height(),
                weight=weight(),
                url = "",
-               description=description.decode('utf-8'))
+               description=description)
 
     else:
       return flask.render_template("index.html",
@@ -85,7 +85,7 @@ def id_index(ids):
                height=height(),
                weight=weight(),
                url = "",
-               description=description.decode('utf-8'))
+               description=description)
 
 
 @app.route('/')
@@ -105,7 +105,7 @@ def index():
              height=height(),
              weight=weight(),
              url=get_url(ids),
-             description=description.decode('utf-8'))
+             description=description)
 
 
 if __name__ == "__main__":
